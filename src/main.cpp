@@ -2480,27 +2480,28 @@ bool CBlock::AcceptBlock(CValidationState &state, CDiskBlockPos *dbp)
         nHeight = pindexPrev->nHeight+1;
 
 
-        // Check proof of work
-        /*        
-        if(nHeight >= 1400 && nHeight <= 1600){
-            unsigned int nBitsNext = GetNextWorkRequired(pindexPrev, this);
-            unsigned int a = 0;
-            if(nBits > nBitsNext) a = nBits - nBitsNext;
-            else if (nBits < nBitsNext) a = nBitsNext - nBits;
-            printf(" !--- %u %u, %u \n", nBits, nBitsNext, a);
-            double n1 = ConvertBitsToDouble(nBits);
-            double n2 = ConvertBitsToDouble(nBitsNext);
-            printf(" !--- %f %f, %f \n", n1, n2, n1-n2);
-            if (abs(n1-n2) > 5)
-                return state.DoS(100, error("AcceptBlock() : incorrect proof of work (DGW pre-fork)"));
-        } else {*/
+        if(fTestNet) {
             if (nBits != GetNextWorkRequired(pindexPrev, this))
                 return state.DoS(100, error("AcceptBlock() : incorrect proof of work"));
-       // }
+        } else {
+            // Check proof of work (Here for the architecture issues with DGW v1 and v2)
+            if(nHeight <= 300){
+                unsigned int nBitsNext = GetNextWorkRequired(pindexPrev, this);
+                double n1 = ConvertBitsToDouble(nBits);
+                double n2 = ConvertBitsToDouble(nBitsNext);
+
+                if (abs(n1-n2) > n1*0.2)
+                    return state.DoS(100, error("AcceptBlock() : incorrect proof of work (DGW pre-fork)"));
+            } else {
+                if (nBits != GetNextWorkRequired(pindexPrev, this))
+                    return state.DoS(100, error("AcceptBlock() : incorrect proof of work"));
+            }
+        }
+
 
 
         // Prevent blocks from too far in the future
-        if(fTestNet || nHeight >= 1600){
+        if(fTestNet || nHeight >= 300){
             if (GetBlockTime() > GetAdjustedTime() + 15 * 60) {
                 return error("AcceptBlock() : block's timestamp too far in the future");
             }
