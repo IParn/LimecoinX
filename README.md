@@ -46,7 +46,7 @@ There is GPU mining software available for X11 which makes it a suitable hashing
 QR Code - LimeCoin has built in QR code support so you can generate QR codes from within the software.
 
 DNS Seed Node - This is used by nodes to find others on the network meaning that when you turn
-Limecoin on it connects to he DNS Seed node to find other Hirocoin clients without any manual effort.
+Limecoin on it connects to he DNS Seed node to find other Limecoin clients without any manual effort.
 
 
 
