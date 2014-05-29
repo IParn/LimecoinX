@@ -31,7 +31,7 @@ the LimeCoin client sofware, see http://www.LimeCoin.org
 
 
 
-Benefits of Using LimeCoin
+Benefits of Using LimeCoin V2
 --------------------------
 
 X11 - Originally from Darkcoin and created by Evan Duffield. X11 uses the following for complex hashing:
