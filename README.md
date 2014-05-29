@@ -13,25 +13,25 @@ http://www.LimeCoin.org
 Copyright (c) 2009-2014 Bitcoin Developers
 Copyright (c) 2013-2014 limecoin Developers
 
-What is LimeCoin?
+What is LimeCoin V2?
 ----------------
 
 LimeCoin is a cryptocurrency based in DarkCoin using X11 as a proof-of-work algorithm.
  - Super secure hashing algorithm: 11 rounds of scientific hashing functions (blake, bmw, groestl, jh, keccak, skein, luffa, cubehash, shavite, simd, echo)
  - GPU/CPU only mining
- - Block generation: 10 minutes
- - Difficulty Retargets every 18 block using Dark Gravity Wave
+ - Block generation: 5 minutes
+ - Difficulty Retargets every 18 block using Dark Gravity Wave 3
  - Est. ~5,2M Coins in 2015, ~10,4M in 2016.
- - Anonymous blockchain using DarkSend technology 
- - Block Reward: 100 Coins
- - Premine: 2%
+ - Anonymous blockchain using DarkSend technology (August 2014)
+ - Block Reward: 50 Coins
+ - Premine: 2% 
 
 For more information, as well as an immediately useable, binary version of
 the LimeCoin client sofware, see http://www.LimeCoin.org
 
 
 
-Benefits of Using LimeCoin
+Benefits of Using LimeCoin V2
 --------------------------
 
 X11 - Originally from Darkcoin and created by Evan Duffield. X11 uses the following for complex hashing:
@@ -39,7 +39,7 @@ blake, bmw, groestl, jh, keccak, skein, luffa, cubehash, shavite, simd and echo.
 
 Energy Saving - Since X11 is much less strenuous on graphics cards, it runs a lot cooler and saves a lot on electricity costs. 
 This is an extremely important factor, the X11 algo can run coolly without any added external cooling and hence allowing 
-for more underclocking and undervolting. It’s a win-win situation!
+for more underclocking and undervolting. Itï¿½s a win-win situation!
 
 There is GPU mining software available for X11 which makes it a suitable hashing solution.
 
