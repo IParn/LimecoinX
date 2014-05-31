@@ -30,7 +30,7 @@ Sanity checks:
 
 Once you've got the right hardware and software:
 
-    git clone git://github.com/IParn/limecoin.git
+    git clone git://github.com/IParn/limecoinx.git
     git clone git://github.com/devrandom/gitian-builder.git
     mkdir gitian-builder/inputs
     cd gitian-builder/inputs
@@ -54,7 +54,7 @@ Once you've got the right hardware and software:
     cd ..
 
     # Build Linux release:
-    cd limecoin
+    cd limecoinx
     git pull
     cd ../gitian-builder
     git pull
