@@ -3104,7 +3104,7 @@ bool InitBlockIndex() {
         //   vMerkleTree: 97ddfbbae6
 
         // Genesis block        
-        const char* pszTimestamp = "limecoinv2 abriendose paso como un antes y un despues en el mundo de las cryptomonedas";
+        const char* pszTimestamp = "limecoinX abriendose paso como un antes y un despues en el mundo de las criptomonedas";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -3122,45 +3122,48 @@ bool InitBlockIndex() {
 
         if (fTestNet)
         {
-            block.nTime    = 1401561941;
+            block.nTime    = 1401570940;
             block.nNonce   = 385931542;
         }
 
+	//codigo de genesis block
 	if (true && block.GetHash() != hashGenesisBlock)
         {
             printf("Searching for genesis block...\n");
             // This will figure out a valid hash and Nonce if you're
             // creating a different genesis block:
-            uint256 hashTarget = CBigNum().SetCompact(block.nBits).getuint256();
-            uint256 thash;
-            char scratchpad[SCRYPT_SCRATCHPAD_SIZE];
 
+            uint256 hashTarget = CBigNum().SetCompact (block.nBits).getuint256();
+            uint256 thash;
             loop
             {
-                scrypt_1024_1_1_256_sp(BEGIN(block.nVersion), BEGIN(thash), scratchpad);
+                thash = block.GetHash();
                 if (thash <= hashTarget)
                     break;
                 if ((block.nNonce & 0xFFF) == 0)
                 {
-                    printf("nonce %08X: hash = %s (target = %s)\n", block.nNonce, thash.ToString().c_str(), hashTarget.ToString().c_str());
+                    printf("nonce %08X: hash = %s (target = %s)\n",  block.nNonce, thash.ToString().c_str(), hashTarget.ToString().c_str());
                 }
                 ++block.nNonce;
                 if (block.nNonce == 0)
                 {
                     printf("NONCE WRAPPED, incrementing time\n");
+
                     ++block.nTime;
                 }
             }
             printf("block.nTime = %u \n", block.nTime);
             printf("block.nNonce = %u \n", block.nNonce);
-            printf("block.GetHash = %s\n", block.GetHash().ToString().c_str());
-
+            printf("block.nVersion = %u \n", block.nVersion);
+            printf("block.GetHash = %s\n", block.GetHash().ToString ().c_str());
+	}
+        
         //// debug print
         uint256 hash = block.GetHash();
         printf("%s\n", hash.ToString().c_str());
         printf("%s\n", hashGenesisBlock.ToString().c_str());
         printf("%s\n", block.hashMerkleRoot.ToString().c_str());
-        assert(block.hashMerkleRoot == uint256("0x47a60d52aa00434c77db777c49fe84e9a85bad49f47247c98c6939cf3ea6eca4"));
+        assert(block.hashMerkleRoot == uint256("0x05d8a08c4e680fcbfb0510fbcb735dcee4dd6e9f63d0762838c8bc0353588957"));
         block.print();
         assert(hash == hashGenesisBlock);
 
