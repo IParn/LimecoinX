@@ -22,7 +22,7 @@ SplashScreen::SplashScreen(const QPixmap &pixmap, Qt::WindowFlags f) :
     QString titleText       = QString(QApplication::applicationName()).replace(QString("-testnet"), QString(""), Qt::CaseSensitive); // cut of testnet, place it as single object further down
     QString versionText     = QString("").arg(QString::fromStdString(FormatFullVersion()));
     QString copyrightText1   = QChar(0xA9)+QString("").arg(COPYRIGHT_YEAR) + QString(tr(""));
-    QString copyrightText2   = QString("").arg(COPYRIGHT_YEAR) + QString(tr(""));
+    QString copyrightText2   = QChar(0xA9)+QString("").arg(COPYRIGHT_YEAR) + QString(tr(""));
 
     QString font            = "Arial";
 
@@ -44,7 +44,7 @@ SplashScreen::SplashScreen(const QPixmap &pixmap, Qt::WindowFlags f) :
     // draw copyright stuff
     pixPaint.setFont(QFont(font, 9*fontFactor));
     pixPaint.drawText(paddingLeftCol2,paddingTopCol2+line1,copyrightText1);
-    pixPaint.drawText(paddingLeftCol2,paddingTopCol2+line2,copyrightText2);
+
 
     pixPaint.end();
 
