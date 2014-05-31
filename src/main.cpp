@@ -31,7 +31,7 @@ CTxMemPool mempool;
 unsigned int nTransactionsUpdated = 0;
 
 map<uint256, CBlockIndex*> mapBlockIndex;
-uint256 hashGenesisBlock("0x00000ca3f904bc6db2ffc72f800858d4d0f56f14ca412c17794c3bd31161acc0"); //mainnet
+uint256 hashGenesisBlock("0x0000010ace86e884d6d7c8529b2050e2de9f987f7763f978109546b0d6659ba2"); //mainnet
 
 static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // limecoin: starting difficulty is 1 / 2^12
 CBlockIndex* pindexGenesisBlock = NULL;
@@ -1084,7 +1084,7 @@ uint256 static GetOrphanRoot(const CBlockHeader* pblock)
 
 int64 static GetBlockValue(int nBits, int nHeight, int64 nFees)
 {
-    int64 nSubsidy = 100 * COIN;
+    int64 nSubsidy = 50 * COIN;
 
 	if (nHeight == 1)
 		nSubsidy = 420000 * COIN;
@@ -1092,9 +1092,9 @@ int64 static GetBlockValue(int nBits, int nHeight, int64 nFees)
     return nSubsidy + nFees;
 }
 
-static const int64 nTargetTimespan = 36 * 10 * 60; // limecoin: 36 bloques
-static const int64 nTargetSpacing = 10 * 60; // limecoin: 10 minutos
-static const int64 nInterval = nTargetTimespan / nTargetSpacing; // 36
+static const int64 nTargetTimespan = 36 * 10 * 60; // limecoin: 72 bloques
+static const int64 nTargetSpacing = 5 * 60; // limecoin: 5 minutos
+static const int64 nInterval = nTargetTimespan / nTargetSpacing; // 72
 
 //
 // minimum amount of work that could possibly be required nTime after
@@ -3116,9 +3116,9 @@ bool InitBlockIndex() {
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1396799176;
+        block.nTime    = 1401573815;
         block.nBits    = 0x1e0ffff0;
-        block.nNonce   = 33661576;
+        block.nNonce   = 33758864;
 
         if (fTestNet)
         {
@@ -3127,7 +3127,7 @@ bool InitBlockIndex() {
         }
 
 	//codigo de genesis block
-	if (true && block.GetHash() != hashGenesisBlock)
+	if (false && block.GetHash() != hashGenesisBlock)
         {
             printf("Searching for genesis block...\n");
             // This will figure out a valid hash and Nonce if you're
