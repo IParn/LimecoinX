@@ -30,8 +30,8 @@ Sanity checks:
 
 Once you've got the right hardware and software:
 
-    git clone git://github.com/IParn/limecoinx.git
-    git clone git://github.com/devrandom/gitian-builder.git
+    git clone https://github.com/IParn/limecoinx.git
+    git clone https://github.com/devrandom/gitian-builder.git
     mkdir gitian-builder/inputs
     cd gitian-builder/inputs
     # Inputs for Linux and Win32:
