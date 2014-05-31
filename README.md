@@ -13,10 +13,10 @@ http://www.LimeCoin.org
 Copyright (c) 2009-2014 Bitcoin Developers
 Copyright (c) 2013-2014 limecoin Developers
 
-What is LimeCoin V2?
+What is LimeCoinX?
 ----------------
 
-LimeCoin is a cryptocurrency based in DarkCoin using X11 as a proof-of-work algorithm.
+LimeCoinX is the Second Generation of LimeCoin a cryptocurrency based in DarkCoin using X11 as a proof-of-work algorithm.
  - Super secure hashing algorithm: 11 rounds of scientific hashing functions (blake, bmw, groestl, jh, keccak, skein, luffa, cubehash, shavite, simd, echo)
  - GPU/CPU only mining
  - Block generation: 5 minutes
@@ -31,7 +31,7 @@ the LimeCoin client sofware, see http://www.LimeCoin.org
 
 
 
-Benefits of Using LimeCoin V2
+Benefits of Using LimeCoinX
 --------------------------
 
 X11 - Originally from Darkcoin and created by Evan Duffield. X11 uses the following for complex hashing:
