@@ -43,7 +43,6 @@ SplashScreen::SplashScreen(const QPixmap &pixmap, Qt::WindowFlags f) :
 
     // draw copyright stuff
     pixPaint.setFont(QFont(font, 9*fontFactor));
-    pixPaint.drawText(paddingLeftCol2,paddingTopCol2+line1,copyrightText1);
 
 
     pixPaint.end();
