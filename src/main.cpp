@@ -3104,7 +3104,7 @@ bool InitBlockIndex() {
         //   vMerkleTree: 97ddfbbae6
 
         // Genesis block        
-        const char* pszTimestamp = "limecoin se convertira en una de las monedas mas segura del mercado, checa nuestros avances";
+        const char* pszTimestamp = "limecoin abriendose paso como un antes y un despues en el mundo de las cryptomonedas";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -3122,7 +3122,7 @@ bool InitBlockIndex() {
 
         if (fTestNet)
         {
-            block.nTime    = 1396684522;
+            block.nTime    = 1401408448;
             block.nNonce   = 385931542;
         }
 
