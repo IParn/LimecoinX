@@ -20,9 +20,9 @@ SplashScreen::SplashScreen(const QPixmap &pixmap, Qt::WindowFlags f) :
 
     // define text to place
     QString titleText       = QString(QApplication::applicationName()).replace(QString("-testnet"), QString(""), Qt::CaseSensitive); // cut of testnet, place it as single object further down
-    QString versionText     = QString("Version %1 ").arg(QString::fromStdString(FormatFullVersion()));
-    QString copyrightText1   = QChar(0xA9)+QString(" 2009-%1 ").arg(COPYRIGHT_YEAR) + QString(tr("The Bitcoin developers"));
-    QString copyrightText2   = QChar(0xA9)+QString(" 2011-%1 ").arg(COPYRIGHT_YEAR) + QString(tr("The limecoin developers"));
+    QString versionText     = QString("").arg(QString::fromStdString(FormatFullVersion()));
+    QString copyrightText1   = QChar(0xA9)+QString("").arg(COPYRIGHT_YEAR) + QString(tr(""));
+    QString copyrightText2   = QChar(0xA9)+QString("").arg(COPYRIGHT_YEAR) + QString(tr(""));
 
     QString font            = "Arial";
 
