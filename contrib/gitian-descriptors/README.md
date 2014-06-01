@@ -30,8 +30,8 @@ Sanity checks:
 
 Once you've got the right hardware and software:
 
-    git clone git://github.com/IParn/limecoin.git
-    git clone git://github.com/devrandom/gitian-builder.git
+    git clone https://github.com/IParn/limecoinx.git
+    git clone https://github.com/devrandom/gitian-builder.git
     mkdir gitian-builder/inputs
     cd gitian-builder/inputs
     # Inputs for Linux and Win32:
@@ -54,19 +54,22 @@ Once you've got the right hardware and software:
     cd ..
 
     # Build Linux release:
-    cd limecoin
+    cd limecoinx
     git pull
     cd ../gitian-builder
     git pull
     sudo ./bin/gbuild --commit limecoin=HEAD ../limecoin/contrib/gitian-descriptors/gitian.yml
 
     # Build Win32 dependencies: (only needs to be done once, or when dependency versions change)
-    sudo ./bin/gbuild --commit limecoin=HEAD ../limecoin/contrib/gitian-descriptors/boost-win32.yml
-    sudo ./bin/gbuild --commit limecoin=HEAD ../limecoin/contrib/gitian-descriptors/deps-win32.yml
-    sudo ./bin/gbuild --commit limecoin=HEAD ../limecoin/contrib/gitian-descriptors/qt-win32.yml
+    sudo ./bin/gbuild --commit limecoinx=HEAD ../limecoinx/contrib/gitian-descriptors/boost-win32.yml
+    mv build/out/*.* inputs/
+    sudo ./bin/gbuild --commit limecoinx=HEAD ../limecoinx/contrib/gitian-descriptors/deps-win32.yml
+    mv build/out/*.* inputs/
+    sudo ./bin/gbuild --commit limecoinx=HEAD ../limecoinx/contrib/gitian-descriptors/qt-win32.yml
+    mv build/out/*.* inputs/
 
     # Build Win32 release:
-    sudo ./bin/gbuild --commit limecoin=HEAD ../limecoin/contrib/gitian-descriptors/gitian-win32.yml
+    sudo ./bin/gbuild --commit limecoinx=HEAD ../limecoinx/contrib/gitian-descriptors/gitian-win32.yml
 
 ---------------------
 
