@@ -46,7 +46,7 @@ script: |
   # Patch Mirror:   http://wtogami.fedorapeople.org/boost-mingw-gas-cross-compile-2013-03-03.patch
   # Patch Mirror:   http://mindstalk.net/host/boost-mingw-gas-cross-compile-2013-03-03.patch
   # Patch Mirror:   http://rose.makesad.us/~paulproteus/mirrors/boost-mingw-gas-cross-compile-2013-03-03.patch
-  patch -p0 < ../boost-mingw-gas-cross-compile-2013-03-03.patch
+  patch -p0 < ../boost-mingw.patch
 
   # Bug Workaround: boost-1.54.0 broke the ability to disable zlib, still broken in 1.55
   # https://svn.boost.org/trac/boost/ticket/9156
