@@ -62,8 +62,11 @@ Once you've got the right hardware and software:
 
     # Build Win32 dependencies: (only needs to be done once, or when dependency versions change)
     sudo ./bin/gbuild --commit limecoinx=HEAD ../limecoinx/contrib/gitian-descriptors/boost-win32.yml
+    mv build/out/*.* inputs/
     sudo ./bin/gbuild --commit limecoinx=HEAD ../limecoinx/contrib/gitian-descriptors/deps-win32.yml
+    mv build/out/*.* inputs/
     sudo ./bin/gbuild --commit limecoinx=HEAD ../limecoinx/contrib/gitian-descriptors/qt-win32.yml
+    mv build/out/*.* inputs/
 
     # Build Win32 release:
     sudo ./bin/gbuild --commit limecoinx=HEAD ../limecoinx/contrib/gitian-descriptors/gitian-win32.yml
