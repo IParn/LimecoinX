@@ -1201,6 +1201,10 @@ static const char *strMainNetDNSSeed[][2] = {
 };
 
 static const char *strTestNetDNSSeed[][2] = {
+    //{"209.208.111.8", "209.208.111.8"}, First official node
+    //{"209.208.109.194", "209.208.109.194"}, Second official node
+    {"209.208.108.71", "209.208.108.71"}, //third official node
+    {"69.28.94.67", "69.28.94.67"}, //fourth official node
     {NULL, NULL},
 };
 
