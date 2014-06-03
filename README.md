@@ -5,7 +5,7 @@ LimeCoin X11 cryptoCurrency
 
 
 
-<img src="http://209.208.111.8/splash.png" alt="Limecoin">
+<img src="http://s30.postimg.org/vickgiflt/splash_testnet.png" alt="Limecoin">
 
 http://www.LimeCoin.org
 
