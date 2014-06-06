@@ -1087,7 +1087,9 @@ int64 static GetBlockValue(int nBits, int nHeight, int64 nFees)
     int64 nSubsidy = 50 * COIN;
 
 	if (nHeight == 1)
-		nSubsidy = 420000 * COIN;
+		nSubsidy = 1306400 * COIN;  // 420,000 premined coins + 886,400 already mined LIM coins 
+		
+		 
 
     return nSubsidy + nFees;
 }
