@@ -31,7 +31,7 @@ CTxMemPool mempool;
 unsigned int nTransactionsUpdated = 0;
 
 map<uint256, CBlockIndex*> mapBlockIndex;
-uint256 hashGenesisBlock("0x0000010ace86e884d6d7c8529b2050e2de9f987f7763f978109546b0d6659ba2"); //mainnet
+uint256 hashGenesisBlock("0x0000012e1b8843ac9ce8c18603658eaf8895f99d3f5e7e1b7b1686f35e3c087a"); //mainnet
 
 static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // limecoin: starting difficulty is 1 / 2^12
 CBlockIndex* pindexGenesisBlock = NULL;
@@ -3118,9 +3118,9 @@ bool InitBlockIndex() {
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1401573815;
+        block.nTime    = 1402097469;
         block.nBits    = 0x1e0ffff0;
-        block.nNonce   = 33758864;
+        block.nNonce   = 34784351;
 
         if (fTestNet)
         {
@@ -3129,7 +3129,7 @@ bool InitBlockIndex() {
         }
 
 	//codigo de genesis block
-	if (true && block.GetHash() != hashGenesisBlock)
+	if (false && block.GetHash() != hashGenesisBlock)
         {
             printf("Searching for genesis block...\n");
             // This will figure out a valid hash and Nonce if you're
