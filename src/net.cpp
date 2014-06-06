@@ -1193,18 +1193,18 @@ void MapPort(bool)
 // The second name should resolve to a list of seed addresses.
 
 static const char *strMainNetDNSSeed[][2] = {
-    //{"209.208.111.8", "209.208.111.8"}, First official node
-    //{"209.208.109.194", "209.208.109.194"}, Second official node
+    {"209.208.111.8", "209.208.111.8"}, //First official node
+    {"209.208.109.194", "209.208.109.194"}, //Second official node
     {"209.208.108.71", "209.208.108.71"}, //third official node
     {"69.28.94.67", "69.28.94.67"}, //fourth official node
     {NULL, NULL},
 };
 
 static const char *strTestNetDNSSeed[][2] = {
-    //{"209.208.111.8", "209.208.111.8"}, First official node
-    //{"209.208.109.194", "209.208.109.194"}, Second official node
-    {"209.208.108.71", "209.208.108.71"}, //third official node
-    {"69.28.94.67", "69.28.94.67"}, //fourth official node
+    {"209.208.111.8", "209.208.111.8"}, // First official node
+    {"209.208.109.194", "209.208.109.194"}, // Second official node
+    {"209.208.108.71", "209.208.108.71"}, // third official node
+    {"69.28.94.67", "69.28.94.67"}, // fourth official node
     {NULL, NULL},
 };
 
@@ -1246,7 +1246,7 @@ void ThreadDNSAddressSeed()
 
 unsigned int pnSeed[] =
 {
-    0xD1D06C47, 0x451C5E43
+    0xD1D06C47, 0x451C5E43, 0xD1D06F08, 0xD1D06DC2
 };
 
 void DumpAddresses()
