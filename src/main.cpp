@@ -3073,7 +3073,7 @@ bool LoadBlockIndex()
         pchMessageStart[1] = 0x1a;
         pchMessageStart[2] = 0x2c;
         pchMessageStart[3] = 0xaf;
-        hashGenesisBlock = uint256("0x0000009262b7678d633e94043772b3672d584fa9a7f3de0ef16c339c926f8ab9");
+        hashGenesisBlock = uint256("0x000008030a1e9a647ecc6119e0782166552e49dadfa8353afa26f3a6c2179845");
     }
 
     //
@@ -3106,7 +3106,7 @@ bool InitBlockIndex() {
         //   vMerkleTree: 97ddfbbae6
 
         // Genesis block        
-        const char* pszTimestamp = "limecoinX abriendose paso como un antes y un despues en el mundo de las criptomonedas";
+        const char* pszTimestamp = "limecoinX ofrece amplia gama de servicios y mejoras para ti";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -3124,12 +3124,12 @@ bool InitBlockIndex() {
 
         if (fTestNet)
         {
-            block.nTime    = 1401570940;
-            block.nNonce   = 386489055;
+            block.nTime    = 1402095180;
+            block.nNonce   = 386986707;
         }
 
 	//codigo de genesis block
-	if (false && block.GetHash() != hashGenesisBlock)
+	if (true && block.GetHash() != hashGenesisBlock)
         {
             printf("Searching for genesis block...\n");
             // This will figure out a valid hash and Nonce if you're
@@ -3165,7 +3165,7 @@ bool InitBlockIndex() {
         printf("%s\n", hash.ToString().c_str());
         printf("%s\n", hashGenesisBlock.ToString().c_str());
         printf("%s\n", block.hashMerkleRoot.ToString().c_str());
-        assert(block.hashMerkleRoot == uint256("0xe05a277f73132a92cec520c1d80594704b4ba2f28ec35d78644e4ce6d4f1e180"));
+        assert(block.hashMerkleRoot == uint256("0xc0c4f68994b78c31b6c7d7a8a895b5a085857adfbb73699bcfe5a247a357df57"));
         block.print();
         assert(hash == hashGenesisBlock);
 
