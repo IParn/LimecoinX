@@ -1,8 +1,11 @@
-
 Updated 4/3/2014 by LimecoinDevs
+
 Fixed QT source Links
+
 Updated to LimeCoin Folders
+
 Updated links to boost 1_55_0
+
 Added FAQ
 
 
