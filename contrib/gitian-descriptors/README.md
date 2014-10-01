@@ -7,7 +7,7 @@
 
 
 
-<img src="http://209.208.111.8/splash.png" alt="Limecoin">
+<img src="http://i.imgur.com/mK7Fi61.png" alt="LimecoinX">
 
 
 Gavin's notes on getting gitian builds up and running using KVM:
@@ -30,7 +30,7 @@ Sanity checks:
 
 Once you've got the right hardware and software:
 
-    git clone https://github.com/IParn/limecoinx.git
+    git clone https://github.com/LIMX-SUPPORT/LimecoinX
     git clone https://github.com/devrandom/gitian-builder.git
     mkdir gitian-builder/inputs
     cd gitian-builder/inputs
@@ -137,6 +137,6 @@ I stopped digging after the reboot solved the issue.)
 
 
 
-If you need more help please visit Limecoin Forum at www.Limecoin.org
+www.limx.eu
 
 
