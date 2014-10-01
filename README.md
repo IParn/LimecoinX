@@ -1,13 +1,13 @@
-LimeCoin X11 cryptoCurrency
+LimeCoinX X11 Crypto Currency
 ================================
 
 
 
 
 
-<img src="http://s30.postimg.org/vickgiflt/splash_testnet.png" alt="Limecoin">
+<img src="http://i.imgur.com/mK7Fi61.png" alt="Limecoin">
 
-http://www.LimeCoin.org
+http://www.limx.eu
 
 
 Copyright (c) 2009-2014 Bitcoin Developers
@@ -27,7 +27,7 @@ LimeCoinX is the Second Generation of LimeCoin a cryptocurrency based in DarkCoi
  - Premine: 2% 
 
 For more information, as well as an immediately useable, binary version of
-the LimeCoin client sofware, see http://www.LimeCoin.org
+the LimeCoinX client sofware, see http://www.limx.eu
 
 
 
@@ -103,7 +103,7 @@ Unit tests for the GUI code are in `src/qt/test/`. To compile and run them:
     make -f Makefile.test
     ./limecoin-qt_test
 
-LimeCoin Updated Windows Wallet Compiling guide
+LimeCoinX Updated Windows Wallet Compiling guide
 -------------------------------
 
 Click on Windows Logo:
