@@ -12,6 +12,7 @@ http://www.limx.eu
 
 Copyright (c) 2009-2014 Bitcoin Developers
 Copyright (c) 2013-2014 limecoin Developers
+Copyright (c) 2014      LIMX Developers
 
 What is LimeCoinX?
 ----------------
@@ -39,7 +40,9 @@ blake, bmw, groestl, jh, keccak, skein, luffa, cubehash, shavite, simd and echo.
 
 Energy Saving - Since X11 is much less strenuous on graphics cards, it runs a lot cooler and saves a lot on electricity costs. 
 This is an extremely important factor, the X11 algo can run coolly without any added external cooling and hence allowing 
-for more underclocking and undervolting. It�s a win-win situation!
+for more underclocking and undervolting. It is a win-win situation!
+
+With its merchant friendly design, LIMX has a bright future.
 
 There is GPU mining software available for X11 which makes it a suitable hashing solution.
 
