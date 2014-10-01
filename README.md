@@ -111,6 +111,6 @@ LimeCoinX Updated Windows Wallet Compiling guide
 
 Click on Windows Logo:
 
-<a href="https://github.com/IParn/limecoin/blob/master/contrib/gitian-descriptors/README.md"><img src="http://www.avirecomp.com/e107_files/images/screenshots/Vista_logo_small.png" alt="Windows Wallet"></a></p>
+<a href="https://github.com/IParn/limecoin/blob/master/contrib/gitian-descriptors/README.md"><img src="http://i.imgur.com/Y2Ri9xc.png" alt="Windows Wallet"></a></p>
 
 
