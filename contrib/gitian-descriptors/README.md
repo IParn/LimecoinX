@@ -1,8 +1,8 @@
-Updated 4/3/2014 by LimecoinDevs
+Updated 10/2014 by LIMX Devs
 
 Fixed QT source Links
 
-Updated to LimeCoin Folders
+Updated to LimeCoinX Folders
 
 Updated links to boost 1_55_0
 
@@ -24,11 +24,27 @@ You need the right hardware: you need a 64-bit-capable CPU with hardware virtual
 You probably need to enable hardware virtualization in your machine's BIOS.
 
 You need to be running a recent version of 64-bit-Ubuntu, and you need to install several prerequisites:
-  sudo apt-get install ruby apache2 git apt-cacher-ng python-vm-builder qemu-kvm
+
+Open the gnome-terminal:
+
+  sudo apt-get install ruby 
+  
+  sudo apt-get install apache2 
+  
+  sudo apt-get install git
+  
+  sudo apt-get install gitweb
+  
+  sudo apt-get install apt-cacher-ng 
+  
+  sudo apt-get install python-vm-builder 
+  
+  sudo apt-get install qemu-kvm
 
 Sanity checks:
-  sudo service apt-cacher-ng status   # Should return apt-cacher-ng is running
-  ls -l /dev/kvm   # Should show a /dev/kvm device
+  sudo service apt-cacher-ng status   
+  # Should return apt-cacher-ng is running ls -l /dev/kvm   
+  # Should show a /dev/kvm device
 
 
 Once you've got the right hardware and software:
@@ -97,7 +113,24 @@ Here's a description of Gavin's setup on OSX 10.6:
   that is at least 20 gigabytes big.
 
 4. Inside the running Ubuntu desktop, install:
-  sudo apt-get install debootstrap lxc ruby apache2 git apt-cacher-ng python-vm-builder
+
+Open the gnome-terminal:
+
+  sudo apt-get install debootstrap 
+
+  sudo apt-get install lxc 
+  
+  sudo apt-get install ruby 
+  
+  sudo apt-get install apache2 
+  
+  sudo apt-get install git 
+  
+  sudo apt-get install gitweb
+  
+  sudo apt-get install apt-cacher-ng 
+  
+  sudo apt-get install python-vm-builder
 
 5. Still inside Ubuntu, tell gitian-builder to use LXC, then follow the "Once you've got the right
   hardware and software" instructions above:
