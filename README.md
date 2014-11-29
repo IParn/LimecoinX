@@ -22,9 +22,10 @@ What is LimeCoinX?
 LimeCoinX is the Second Generation of LimeCoin a cryptocurrency based in DarkCoin using X11 as a proof-of-work algorithm.
  - Super secure hashing algorithm: 11 rounds of scientific hashing functions (blake, bmw, groestl, jh, keccak, skein, luffa, cubehash, shavite, simd, echo)
  - GPU/CPU only mining
+ - 525.000.000 LIMX max. amount ~ 100 years
  - Block generation: 5 minutes
  - Difficulty Retargets every 18 block using Dark Gravity Wave 3
- - Est. ~5,2M Coins in 2015, ~10,4M in 2016.
+ - Est. ~5,2M LIMX p.a.
  - Anonymous blockchain using DarkSend technology (August 2014)
  - Block Reward: 50 Coins
  - Premine: 2% 
