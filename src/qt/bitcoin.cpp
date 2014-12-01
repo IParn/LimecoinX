@@ -154,12 +154,12 @@ int main(int argc, char *argv[])
 
     // Application identification (must be set before OptionsModel is initialized,
     // as it is used to locate QSettings)
-    QApplication::setOrganizationName("limecoin");
-    QApplication::setOrganizationDomain("limecoin.io");
+    QApplication::setOrganizationName("LIMX");
+    QApplication::setOrganizationDomain("limx.eu");
     if(GetBoolArg("-testnet")) // Separate UI settings for testnet
-        QApplication::setApplicationName("limecoin-Qt-testnet");
+        QApplication::setApplicationName("LIMX-Qt-testnet");
     else
-        QApplication::setApplicationName("limecoin-Qt");
+        QApplication::setApplicationName("LIMX-Qt");
 
     // ... then GUI settings:
     OptionsModel optionsModel;
