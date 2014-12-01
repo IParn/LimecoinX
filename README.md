@@ -25,10 +25,10 @@ LimeCoinX is the Second Generation of LimeCoin a cryptocurrency based in DarkCoi
  - 525.000.000 LIMX max. amount ~ 100 years
  - Block generation: 5 minutes
  - Difficulty Retargets every 18 block using Dark Gravity Wave 3
- - Est. ~5,2M LIMX p.a.
+ - Est. ~5.250.000 LIMX p.a.
  - Anonymous blockchain using DarkSend technology (August 2014)
  - Block Reward: 50 Coins
- - Premine: 2% 
+ - Premine: ~0,3% 
 
 For more information, as well as an immediately useable, binary version of
 the LimeCoinX client sofware, see http://www.limx.eu
