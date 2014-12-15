@@ -20,14 +20,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "limecoin"
-            VALUE "FileDescription",    "limecoin-Qt (OSS GUI client for limecoin)"
+            VALUE "CompanyName",        "LimecoinX"
+            VALUE "FileDescription",    "LimecoinX-qt (OSS GUI client for LimecoinX)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "limecoin-qt"
+            VALUE "InternalName",       "LimecoinX-qt"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "limecoin-qt.exe"
-            VALUE "ProductName",        "limecoin-Qt"
+            VALUE "OriginalFilename",   "LimecoinX-qt.exe"
+            VALUE "ProductName",        "LimecoinX-qt"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END
