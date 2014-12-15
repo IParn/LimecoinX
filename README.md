@@ -14,7 +14,7 @@ Copyright (c) 2009-2014 Bitcoin Developers
 
 Copyright (c) 2013-2014 limecoin Developers
 
-Copyright (c) 2014      LIMX Developers
+Copyright (c) 2014-2114 LIMX Developers
 
 What is LimeCoinX?
 ----------------

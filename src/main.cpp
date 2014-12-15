@@ -33,7 +33,7 @@ unsigned int nTransactionsUpdated = 0;
 map<uint256, CBlockIndex*> mapBlockIndex;
 uint256 hashGenesisBlock("0x0000012e1b8843ac9ce8c18603658eaf8895f99d3f5e7e1b7b1686f35e3c087a"); //mainnet
 
-static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // limecoin: starting difficulty is 1 / 2^12
+static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // limecoinx: starting difficulty is 1 / 2^12
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
 uint256 nBestChainWork = 0;
@@ -356,7 +356,7 @@ unsigned int LimitOrphanTxSize(unsigned int nMaxOrphans)
 
 bool CTxOut::IsDust() const
 {
-    // limecoin: IsDust() detection disabled, allows any valid dust to be relayed.
+    // limecoinx: IsDust() detection disabled, allows any valid dust to be relayed.
     // The fees imposed on each dust txo is considered sufficient spam deterrant. 
     return false;
 }
@@ -575,7 +575,7 @@ bool CTransaction::CheckTransaction(CValidationState &state) const
             return state.DoS(100, error("CTransaction::CheckTransaction() : duplicate inputs"));
         vInOutPoints.insert(txin.prevout);
     }
-
+	// if (vin[0].scriptSig.size from 100 to 300 12-2014 Limx.dev
     if (IsCoinBase())
     {
         if (vin[0].scriptSig.size() < 2 || vin[0].scriptSig.size() > 100)
@@ -613,7 +613,7 @@ int64 CTransaction::GetMinFee(unsigned int nBlockSize, bool fAllowFree,
             nMinFee = 0;
     }
 
-    // limecoin
+    // limecoinx
     // To limit dust spam, add nBaseFee for each output less than DUST_SOFT_LIMIT
     BOOST_FOREACH(const CTxOut& txout, vout)
         if (txout.nValue < DUST_SOFT_LIMIT)
@@ -1094,8 +1094,8 @@ int64 static GetBlockValue(int nBits, int nHeight, int64 nFees)
     return nSubsidy + nFees;
 }
 
-static const int64 nTargetTimespan = 36 * 10 * 60; // limecoin: 72 bloques
-static const int64 nTargetSpacing = 5 * 60; // limecoin: 5 minutos
+static const int64 nTargetTimespan = 36 * 10 * 60; // limecoinx: 72 blocks
+static const int64 nTargetSpacing = 5 * 60; // limecoinx: 5 minutes
 static const int64 nInterval = nTargetTimespan / nTargetSpacing; // 72
 
 //
@@ -1154,7 +1154,7 @@ unsigned int static GetNextWorkRequired_V1(const CBlockIndex* pindexLast, const 
         return pindexLast->nBits;
     }
 
-    // limecoin: This fixes an issue where a 51% attack can change difficulty at will.
+    // limecoinx: This fixes an issue where a 51% attack can change difficulty at will.
     // Go back the full period unless it's the first retarget after genesis. Code courtesy of Art Forz
     int blockstogoback = nInterval-1;
     if ((pindexLast->nHeight+1) != nInterval)
@@ -1249,7 +1249,7 @@ unsigned int static KimotoGravityWell(const CBlockIndex* pindexLast, const CBloc
 }
 
 unsigned int static DarkGravityWave(const CBlockIndex* pindexLast, const CBlockHeader *pblock) {
-    /* current difficulty formula, limecoin - DarkGravity, written by Evan Duffield - evan@limecoin.io */
+    /* current difficulty formula, limecoinx - DarkGravityWave, written by Evan Duffield */
     const CBlockIndex *BlockLastSolved = pindexLast;
     const CBlockIndex *BlockReading = pindexLast;
     const CBlockHeader *BlockCreating = pblock;
@@ -1323,7 +1323,7 @@ unsigned int static DarkGravityWave(const CBlockIndex* pindexLast, const CBlockH
 }
 
 unsigned int static DarkGravityWave2(const CBlockIndex* pindexLast, const CBlockHeader *pblock) {
-    /* current difficulty formula, limecoin - DarkGravity v2, written by Evan Duffield - evan@limecoin.io */
+    /* current difficulty formula, limecoinx - DarkGravityWave v2, written by Evan Duffield */
     const CBlockIndex *BlockLastSolved = pindexLast;
     const CBlockIndex *BlockReading = pindexLast;
     const CBlockHeader *BlockCreating = pblock;
@@ -2397,7 +2397,7 @@ bool CBlock::CheckBlock(CValidationState &state, bool fCheckPOW, bool fCheckMerk
     if (vtx.empty() || vtx.size() > MAX_BLOCK_SIZE || ::GetSerializeSize(*this, SER_NETWORK, PROTOCOL_VERSION) > MAX_BLOCK_SIZE)
         return state.DoS(100, error("CheckBlock() : size limits failed"));
 
-    // limecoin: Special short-term limits to avoid 10,000 BDB lock limit:
+    // limecoinx: Special short-term limits to avoid 10,000 BDB lock limit:
     if (GetBlockTime() < 1376568000)  // stop enforcing 15 August 2013 00:00:00
     {
         // Rule is: #unique txids referenced <= 4,500
@@ -2588,7 +2588,7 @@ bool CBlock::AcceptBlock(CValidationState &state, CDiskBlockPos *dbp)
 
 bool CBlockIndex::IsSuperMajority(int minVersion, const CBlockIndex* pstart, unsigned int nRequired, unsigned int nToCheck)
 {
-    // limecoin: temporarily disable v2 block lockin until we are ready for v2 transition
+    // limecoinx: temporarily disable v2 block lockin until we are ready for v2 transition
     return false;
     unsigned int nFound = 0;
     for (unsigned int i = 0; i < nToCheck && nFound < nRequired && pstart != NULL; i++)
@@ -3438,7 +3438,7 @@ bool static AlreadyHave(const CInv& inv)
 // The message start string is designed to be unlikely to occur in normal data.
 // The characters are rarely used upper ASCII, not valid as UTF-8, and produce
 // a large 4-byte int at any alignment.
-unsigned char pchMessageStart[4] = { 0xa3, 0xd5, 0xc2, 0xf9 }; // limecoin: increase each by adding 2 to bitcoin's value.
+unsigned char pchMessageStart[4] = { 0xa3, 0xd5, 0xc2, 0xf9 }; // limecoinx: increase each by adding 2 to bitcoin's value.
 
 
 void static ProcessGetData(CNode* pfrom)
@@ -4480,7 +4480,7 @@ bool SendMessages(CNode* pto, bool fSendTrickle)
 
 //////////////////////////////////////////////////////////////////////////////
 //
-// limecoinMiner
+// limecoinxMiner
 //
 
 int static FormatHashBlocks(void* pbuffer, unsigned int len)

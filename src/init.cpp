@@ -179,7 +179,7 @@ bool AppInit(int argc, char* argv[])
         if (mapArgs.count("-?") || mapArgs.count("--help"))
         {
             // First part of help message is specific to bitcoind / RPC client
-            std::string strUsage = _("limecoin version") + " " + FormatFullVersion() + "\n\n" +
+            std::string strUsage = _("LimecoinX version") + " " + FormatFullVersion() + "\n\n" +
                 _("Usage:") + "\n" +
                   "  limecoind [options]                     " + "\n" +
                   "  limecoind [options] <command> [params]  " + _("Send command to -server or limecoind") + "\n" +
