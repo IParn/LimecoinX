@@ -1241,8 +1241,8 @@ void ThreadDNSAddressSeed()
 
 unsigned int pnSeed[] =
 {
-    0x904CEF42, 0x95ACA665
-};
+    0xD1D06C47, 0xD1D06F08, 0x1BC0903A, 0xC6C766A5, 0xB924485A, 0x7526EDE1, 0xB924485A, 0x5519C5BA
+};// Limxian, Ethought, U/A, Coingather Wallet02, fastwebnet.it 9.1.1.,U/A, fastwebnet.it 9.1.1., astra3253.server4you.de 9.1.1.
 
 void DumpAddresses()
 {
