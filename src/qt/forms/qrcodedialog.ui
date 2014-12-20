@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>340</width>
-    <height>554</height>
+    <height>530</height>
    </rect>
   </property>
   <property name="palette">
@@ -25,9 +25,9 @@
      <colorrole role="Button">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
+        <red>193</red>
+        <green>253</green>
+        <blue>181</blue>
        </color>
       </brush>
      </colorrole>
@@ -97,18 +97,18 @@
      <colorrole role="Base">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
        </color>
       </brush>
      </colorrole>
      <colorrole role="Window">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
+        <red>193</red>
+        <green>253</green>
+        <blue>181</blue>
        </color>
       </brush>
      </colorrole>
@@ -162,9 +162,9 @@
      <colorrole role="Button">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
+        <red>193</red>
+        <green>253</green>
+        <blue>181</blue>
        </color>
       </brush>
      </colorrole>
@@ -234,18 +234,18 @@
      <colorrole role="Base">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
        </color>
       </brush>
      </colorrole>
      <colorrole role="Window">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
+        <red>193</red>
+        <green>253</green>
+        <blue>181</blue>
        </color>
       </brush>
      </colorrole>
@@ -299,9 +299,9 @@
      <colorrole role="Button">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
+        <red>193</red>
+        <green>253</green>
+        <blue>181</blue>
        </color>
       </brush>
      </colorrole>
@@ -371,18 +371,18 @@
      <colorrole role="Base">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
+        <red>193</red>
+        <green>253</green>
+        <blue>181</blue>
        </color>
       </brush>
      </colorrole>
      <colorrole role="Window">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
+        <red>193</red>
+        <green>253</green>
+        <blue>181</blue>
        </color>
       </brush>
      </colorrole>
@@ -428,22 +428,7 @@
   <property name="windowTitle">
    <string>QR Code Dialog</string>
   </property>
-  <property name="styleSheet">
-   <string notr="true">background-color: rgb(0, 0, 0);</string>
-  </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
-   <property name="leftMargin">
-    <number>11</number>
-   </property>
-   <property name="topMargin">
-    <number>11</number>
-   </property>
-   <property name="rightMargin">
-    <number>11</number>
-   </property>
-   <property name="bottomMargin">
-    <number>11</number>
-   </property>
    <item>
     <widget class="QLabel" name="lblQRCode">
      <property name="sizePolicy">
@@ -457,9 +442,6 @@
        <width>300</width>
        <height>300</height>
       </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 255, 255);</string>
      </property>
      <property name="textFormat">
       <enum>Qt::PlainText</enum>
@@ -486,9 +468,6 @@
        <height>50</height>
       </size>
      </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 255, 255);</string>
-     </property>
      <property name="tabChangesFocus">
       <bool>true</bool>
      </property>
@@ -505,9 +484,6 @@
         <property name="enabled">
          <bool>true</bool>
         </property>
-        <property name="styleSheet">
-         <string notr="true">color: rgb(255, 255, 255);</string>
-        </property>
         <property name="text">
          <string>Request Payment</string>
         </property>
@@ -520,9 +496,6 @@
         </property>
         <item row="1" column="0">
          <widget class="QLabel" name="lblLabel">
-          <property name="styleSheet">
-           <string notr="true">color: rgb(255, 255, 255);</string>
-          </property>
           <property name="text">
            <string>Label:</string>
           </property>
@@ -538,17 +511,10 @@
          </widget>
         </item>
         <item row="1" column="1">
-         <widget class="QLineEdit" name="lnLabel">
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
-          </property>
-         </widget>
+         <widget class="QLineEdit" name="lnLabel"/>
         </item>
         <item row="2" column="0">
          <widget class="QLabel" name="lblMessage">
-          <property name="styleSheet">
-           <string notr="true">color: rgb(255, 255, 255);</string>
-          </property>
           <property name="text">
            <string>Message:</string>
           </property>
@@ -564,11 +530,7 @@
          </widget>
         </item>
         <item row="2" column="1">
-         <widget class="QLineEdit" name="lnMessage">
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
-          </property>
-         </widget>
+         <widget class="QLineEdit" name="lnMessage"/>
         </item>
         <item row="0" column="0">
          <widget class="QLabel" name="lblAmount">
@@ -577,9 +539,6 @@
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">color: rgb(255, 255, 255);</string>
           </property>
           <property name="text">
            <string>Amount:</string>
@@ -605,9 +564,6 @@
             <width>80</width>
             <height>0</height>
            </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
           </property>
          </widget>
         </item>
@@ -647,7 +603,6 @@
    <class>BitcoinAmountField</class>
    <extends>QSpinBox</extends>
    <header>bitcoinamountfield.h</header>
-   <container>1</container>
   </customwidget>
  </customwidgets>
  <resources/>

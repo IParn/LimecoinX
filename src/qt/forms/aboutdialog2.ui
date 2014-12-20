@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>SendCoinsEntry</class>
- <widget class="QFrame" name="SendCoinsEntry">
+ <class>AboutDialog</class>
+ <widget class="QDialog" name="AboutDialog">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>729</width>
-    <height>136</height>
+    <width>821</width>
+    <height>342</height>
    </rect>
   </property>
   <property name="palette">
@@ -25,9 +25,9 @@
      <colorrole role="Button">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>193</red>
-        <green>253</green>
-        <blue>181</blue>
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
        </color>
       </brush>
      </colorrole>
@@ -97,18 +97,18 @@
      <colorrole role="Base">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
        </color>
       </brush>
      </colorrole>
      <colorrole role="Window">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>193</red>
-        <green>253</green>
-        <blue>181</blue>
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
        </color>
       </brush>
      </colorrole>
@@ -162,9 +162,9 @@
      <colorrole role="Button">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>193</red>
-        <green>253</green>
-        <blue>181</blue>
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
        </color>
       </brush>
      </colorrole>
@@ -234,18 +234,18 @@
      <colorrole role="Base">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
        </color>
       </brush>
      </colorrole>
      <colorrole role="Window">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>193</red>
-        <green>253</green>
-        <blue>181</blue>
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
        </color>
       </brush>
      </colorrole>
@@ -299,9 +299,9 @@
      <colorrole role="Button">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>193</red>
-        <green>253</green>
-        <blue>181</blue>
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
        </color>
       </brush>
      </colorrole>
@@ -371,18 +371,18 @@
      <colorrole role="Base">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>193</red>
-        <green>253</green>
-        <blue>181</blue>
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
        </color>
       </brush>
      </colorrole>
      <colorrole role="Window">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>193</red>
-        <green>253</green>
-        <blue>181</blue>
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
        </color>
       </brush>
      </colorrole>
@@ -426,149 +426,224 @@
    </palette>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>About limecoin</string>
   </property>
-  <property name="frameShape">
-   <enum>QFrame::StyledPanel</enum>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(0, 0, 0);</string>
   </property>
-  <property name="frameShadow">
-   <enum>QFrame::Sunken</enum>
-  </property>
-  <layout class="QGridLayout" name="gridLayout">
-   <property name="spacing">
-    <number>12</number>
+  <layout class="QHBoxLayout" name="horizontalLayout_2">
+   <property name="leftMargin">
+    <number>1</number>
    </property>
-   <item row="5" column="0">
-    <widget class="QLabel" name="label">
+   <property name="topMargin">
+    <number>1</number>
+   </property>
+   <property name="rightMargin">
+    <number>1</number>
+   </property>
+   <property name="bottomMargin">
+    <number>1</number>
+   </property>
+   <item>
+    <widget class="QLabel" name="label_6">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
      <property name="text">
-      <string>A&amp;mount:</string>
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="../bitcoin.qrc">:/icons/bitcoin_testnet</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
      </property>
      <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-     <property name="buddy">
-      <cstring>payAmount</cstring>
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
      </property>
     </widget>
    </item>
-   <item row="3" column="0">
-    <widget class="QLabel" name="label_2">
-     <property name="text">
-      <string>Pay &amp;To:</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-     <property name="buddy">
-      <cstring>payTo</cstring>
-     </property>
-    </widget>
-   </item>
-   <item row="5" column="1">
-    <widget class="BitcoinAmountField" name="payAmount"/>
-   </item>
-   <item row="4" column="0">
-    <widget class="QLabel" name="label_4">
-     <property name="text">
-      <string>&amp;Label:</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-     <property name="buddy">
-      <cstring>addAsLabel</cstring>
-     </property>
-    </widget>
-   </item>
-   <item row="3" column="1">
-    <layout class="QHBoxLayout" name="payToLayout">
-     <property name="spacing">
-      <number>0</number>
-     </property>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
      <item>
-      <widget class="QValidatedLineEdit" name="payTo">
-       <property name="toolTip">
-        <string>The address to send the payment to (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</string>
+      <spacer name="verticalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
        </property>
-       <property name="maxLength">
-        <number>34</number>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="cursor">
+          <cursorShape>IBeamCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Limecoinx Version&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="textInteractionFlags">
+          <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="versionLabel">
+         <property name="cursor">
+          <cursorShape>IBeamCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string notr="true">0.9.1.2.</string>
+         </property>
+         <property name="textInteractionFlags">
+          <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QLabel" name="copyrightLabel">
+       <property name="cursor">
+        <cursorShape>IBeamCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string notr="true">Copyright &amp;copy; 2009-YYYY The Bitcoin developers
+Copyright &amp;copy; 2014-YYYY The limecoinx developers
+Copyright &amp;copy 2014-2114 The LIMX DEVELOPERS
+Christian Knöpke Germany - Limx.Dev</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::RichText</enum>
+       </property>
+       <property name="textInteractionFlags">
+        <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QToolButton" name="addressBookButton">
-       <property name="toolTip">
-        <string>Choose address from address book</string>
+      <widget class="QLabel" name="label_2">
+       <property name="cursor">
+        <cursorShape>IBeamCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);</string>
        </property>
        <property name="text">
-        <string/>
+        <string>
+This is experimental software.
+
+Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
+This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (http://www.openssl.org/) and cryptographic software written by Eric Young (eay@cryptsoft.com) and UPnP software written by Thomas Bernard.
+ 
+2014-2114 The LIMX DEVELOPERS
+ Christian Knöpke Germany - Limx.Dev</string>
        </property>
-       <property name="icon">
-        <iconset resource="../bitcoin.qrc">
-         <normaloff>:/icons/address-book</normaloff>:/icons/address-book</iconset>
+       <property name="wordWrap">
+        <bool>true</bool>
        </property>
-       <property name="shortcut">
-        <string>Alt+A</string>
+       <property name="textInteractionFlags">
+        <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QToolButton" name="pasteButton">
-       <property name="toolTip">
-        <string>Paste address from clipboard</string>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
        </property>
-       <property name="text">
-        <string/>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>30</height>
+        </size>
        </property>
-       <property name="icon">
-        <iconset resource="../bitcoin.qrc">
-         <normaloff>:/icons/editpaste</normaloff>:/icons/editpaste</iconset>
-       </property>
-       <property name="shortcut">
-        <string>Alt+P</string>
-       </property>
-      </widget>
+      </spacer>
      </item>
      <item>
-      <widget class="QToolButton" name="deleteButton">
-       <property name="toolTip">
-        <string>Remove this recipient</string>
+      <widget class="QDialogButtonBox" name="buttonBox">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
        </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="icon">
-        <iconset resource="../bitcoin.qrc">
-         <normaloff>:/icons/remove</normaloff>:/icons/remove</iconset>
+       <property name="standardButtons">
+        <set>QDialogButtonBox::Ok</set>
        </property>
       </widget>
      </item>
     </layout>
    </item>
-   <item row="4" column="1">
-    <widget class="QValidatedLineEdit" name="addAsLabel">
-     <property name="toolTip">
-      <string>Enter a label for this address to add it to your address book</string>
-     </property>
-    </widget>
-   </item>
   </layout>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>BitcoinAmountField</class>
-   <extends>QSpinBox</extends>
-   <header>bitcoinamountfield.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>QValidatedLineEdit</class>
-   <extends>QLineEdit</extends>
-   <header>qvalidatedlineedit.h</header>
-  </customwidget>
- </customwidgets>
  <resources>
   <include location="../bitcoin.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>AboutDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>360</x>
+     <y>308</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>AboutDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>428</x>
+     <y>308</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
