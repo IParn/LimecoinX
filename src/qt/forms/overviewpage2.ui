@@ -190,6 +190,22 @@
          </widget>
         </item>
         <item>
+         <widget class="QLabel" name="label_12">
+          <property name="font">
+           <font>
+            <family>Arabic Typesetting</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>&lt;a href=&quot;http://www.limx.eu&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#32cd32;&quot;&gt;www.limx.eu&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
          <spacer name="verticalSpacer">
           <property name="orientation">
            <enum>Qt::Vertical</enum>
@@ -531,7 +547,9 @@
           <item>
            <widget class="QListView" name="listTransactions">
             <property name="styleSheet">
-             <string notr="true">QListView { background: transparent;color: rgb(255, 255, 255); }
+             <string notr="true">QListView { background: transparent;color: rgb(255, 255, 255);selection-background-color: rgb(255, 255, 255);alternate-background-color: rgb(255, 255, 255); }
+
+
 </string>
             </property>
             <property name="frameShape">
