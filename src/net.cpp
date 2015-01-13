@@ -1193,14 +1193,24 @@ void MapPort(bool)
 // The second name should resolve to a list of seed addresses.
 
 static const char *strMainNetDNSSeed[][2] = {
-    {"149.172.166.101", "149.172.166.101"}, //First official node "209.208.111.8", "209.208.111.8"old nodes 12-2014
-	{"144.76.239.66", "144.76.239.66"}, //Second official node
+    {"5.56.209.255", "5.56.209.255"}, //Limxian
+    {"144.76.239.66", "144.76.239.66"}, //coinwall
+    {"108.61.179.50", "108.61.179.50"}, //cointopl
+    {"27.192.144.58", "27.192.144.58"},
+    {"212.227.91.190", "212.227.91.190"}, //p2pool.palim.eu
+    {"5.9.39.9", "5.9.39.9"},//Bchain
+    //First official node "209.208.111.8", "209.208.111.8"old nodes 12-2014
+
     {NULL, NULL},
 };
 
 static const char *strTestNetDNSSeed[][2] = {
-    {"149.172.166.101", "149.172.166.101"}, // First official node 209.208.111.8", "209.208.111.8 limx.dev 12-2014
+    {"5.56.209.255", "5.56.209.255"}, // First official node 209.208.111.8", "209.208.111.8 limx.dev 12-2014
 	{"144.76.239.66", "144.76.239.66"}, // second official node
+
+    //cointoplay
+    //coinwallet
+    //limxianorg
 };
 
 void ThreadDNSAddressSeed()
@@ -1241,9 +1251,10 @@ void ThreadDNSAddressSeed()
 
 unsigned int pnSeed[] =
 {
-    0x904CEF42, 0x95ACA665, 0x1BC0903A, 0xC6C766A5, 0xB924485A, 0x7526EDE1, 0xB924485A, 0x5519C5BA
-};// Limxian, Ethought, U/A, Coingather Wallet02, fastwebnet.it 9.1.1.,U/A, fastwebnet.it 9.1.1., astra3253.server4you.de 9.1.1.
-
+    0x0538D1FF, 0x95ACA665, 0x1BC0903A, 0xC6C766A5, 0xB924485A, 0x7526EDE1, 0xB924485A, 0x5519C5BA, 0x3EDD537F, 0x6C3DB332,
+    0x904CEF42, 0x0587BF16, 0xA2F3CEE2, 0xCDD18F2A, 0x2F115487, 0xD4E35BBE, 0x5D989674, 0xBCA61AD1, 0x94FB46C2, 0x904CEF42,
+    0x2E69D968, 0x05092709
+};// Limxian, Ethought, U/A, Coingather Wallet02, fastwebnet.it 9.1.1.,U/A, fastwebnet.it 9.1.1., astra3253.server4you.de 9.1.1., aikapool,cointoplay
 void DumpAddresses()
 {
     int64 nStart = GetTimeMillis();
