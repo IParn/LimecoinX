@@ -25,7 +25,7 @@ public:
     ~OverviewPage();
 
     void setClientModel(ClientModel *clientModel);
-    void setWalletModel(WalletModel *walletModel);
+    void setModel(WalletModel *walletModel);
     void showOutOfSyncWarning(bool fShow);
 
 public slots:
@@ -48,7 +48,7 @@ private:
 private slots:
     void updateDisplayUnit();
     void handleTransactionClicked(const QModelIndex &index);
-    void updateAlerts(const QString &warnings);
+ //   void updateAlerts(const QString &warnings);
 };
 
 #endif // OVERVIEWPAGE_H

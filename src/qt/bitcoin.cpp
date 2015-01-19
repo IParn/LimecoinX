@@ -254,16 +254,10 @@ int main(int argc, char *argv[])
                     splash.finish(&window);
 
                 ClientModel clientModel(&optionsModel);
-                WalletModel *walletModel = 0;
-                if(pwalletMain)
-                    walletModel = new WalletModel(pwalletMain, &optionsModel);
+				WalletModel walletModel(pwalletMain, &optionsModel);
 
                 window.setClientModel(&clientModel);
-                if(walletModel)
-                {
-                    window.addWallet("~Default", walletModel);
-                    window.setCurrentWallet("~Default");
-                }
+				window.setWalletModel(&walletModel);
 
                 // If -min option passed, start window minimized.
                 if(GetBoolArg("-min"))
@@ -284,9 +278,9 @@ int main(int argc, char *argv[])
 
                 window.hide();
                 window.setClientModel(0);
-                window.removeAllWallets();
+                window.setWalletModel(0);
                 guiref = 0;
-                delete walletModel;
+
             }
             // Shutdown the core and its threads, but don't exit Bitcoin-Qt here
             threadGroup.interrupt_all();

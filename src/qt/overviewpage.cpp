@@ -147,7 +147,7 @@ void OverviewPage::setBalance(qint64 balance, qint64 unconfirmedBalance, qint64 
     ui->labelImmature->setVisible(showImmature);
     ui->labelImmatureText->setVisible(showImmature);
 }
-
+/*
 void OverviewPage::setClientModel(ClientModel *model)
 {
     this->clientModel = model;
@@ -158,8 +158,8 @@ void OverviewPage::setClientModel(ClientModel *model)
         updateAlerts(model->getStatusBarWarnings());
     }
 }
-
-void OverviewPage::setWalletModel(WalletModel *model)
+*/
+void OverviewPage::setModel(WalletModel *model)
 {
     this->walletModel = model;
     if(model && model->getOptionsModel())
@@ -199,13 +199,13 @@ void OverviewPage::updateDisplayUnit()
         ui->listTransactions->update();
     }
 }
-
+/*
 void OverviewPage::updateAlerts(const QString &warnings)
 {
     this->ui->labelAlerts->setVisible(!warnings.isEmpty());
     this->ui->labelAlerts->setText(warnings);
 }
-
+*/
 void OverviewPage::showOutOfSyncWarning(bool fShow)
 {
     ui->labelWalletStatus->setVisible(fShow);
