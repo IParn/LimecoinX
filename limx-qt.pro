@@ -1,7 +1,7 @@
 TEMPLATE = app
 TARGET = limx-qt
 macx:TARGET = "limx-qt"
-VERSION = 0.9.1.2
+VERSION = 0.9.1.3
 INCLUDEPATH += src src/json src/qt src/qt/plugins/mrichtexteditor
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE BOOST_SPIRIT_THREADSAFE BOOST_THREAD_PROVIDES_GENERIC_SHARED_MUTEX_ON_WIN __NO_SYSTEM_INCLUDES
@@ -25,7 +25,7 @@ QMAKE_CXXFLAGS = -fpermissive
 ##############################################
 # Guide by Limx.dev - Christian Knoepke
 # https://bitcointalk.org/index.php?topic=149479.0
-# Compielier unter Mysys Shell
+# Win 32 Mysys Shell
 # cd /C/Limecoinx-master/src/leveldb
 # TARGET_OS=NATIVE_WINDOWS make libleveldb.a libmemenv.a
 # Dos Shell
@@ -48,8 +48,8 @@ BOOST_INCLUDE_PATH=C:/deps/boost_1_55_0
 BOOST_LIB_PATH=C:/deps/boost_1_55_0/stage/lib
 BDB_INCLUDE_PATH=C:/deps/db-4.8.30.NC/build_unix
 BDB_LIB_PATH=C:/deps/db-4.8.30.NC/build_unix
-OPENSSL_INCLUDE_PATH=C:/deps/openssl-1.0.1i/include
-OPENSSL_LIB_PATH=C:/deps/openssl-1.0.1i
+OPENSSL_INCLUDE_PATH=C:/deps/openssl-1.0.2/include
+OPENSSL_LIB_PATH=C:/deps/openssl-1.0.2
 MINIUPNPC_INCLUDE_PATH=C:/deps/
 MINIUPNPC_LIB_PATH=C:/deps/miniupnpc
 LIBPNG_INCLUDE_PATH=d:/deps/libpng-1.6.12
