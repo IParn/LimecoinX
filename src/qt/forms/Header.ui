@@ -40,7 +40,7 @@
      </property>
      <property name="minimumSize">
       <size>
-       <width>191</width>
+       <width>250</width>
        <height>83</height>
       </size>
      </property>
@@ -75,3 +75,4 @@
  </resources>
  <connections/>
 </ui>
+
