@@ -23,7 +23,7 @@
    <item row="0" column="0">
     <widget class="QTabWidget" name="tabWidget">
      <property name="currentIndex">
-      <number>0</number>
+      <number>2</number>
      </property>
      <widget class="QWidget" name="tab_5">
       <attribute name="title">
@@ -396,9 +396,9 @@ gridline-color: rgb(255, 255, 255);</string>
        <property name="geometry">
         <rect>
          <x>20</x>
-         <y>30</y>
+         <y>10</y>
          <width>121</width>
-         <height>251</height>
+         <height>301</height>
         </rect>
        </property>
        <property name="text">
@@ -415,9 +415,9 @@ gridline-color: rgb(255, 255, 255);</string>
        <property name="geometry">
         <rect>
          <x>180</x>
-         <y>30</y>
+         <y>10</y>
          <width>161</width>
-         <height>251</height>
+         <height>301</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -440,9 +440,9 @@ gridline-color: rgb(255, 255, 255);</string>
        <property name="geometry">
         <rect>
          <x>410</x>
-         <y>30</y>
+         <y>10</y>
          <width>160</width>
-         <height>211</height>
+         <height>301</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -452,7 +452,7 @@ gridline-color: rgb(255, 255, 255);</string>
         </sizepolicy>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;Games&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://www.limxian.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Limxian Games&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;&lt;br/&gt;Coinranking&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://www.coinmarketcap.com &quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Coinmarketcap.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;Games&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://www.limxian.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Limxian Games&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;&lt;br/&gt;Coinranking&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://coinmarketcap.com/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Coinmarketcap.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -470,9 +470,9 @@ gridline-color: rgb(255, 255, 255);</string>
        <property name="geometry">
         <rect>
          <x>50</x>
-         <y>30</y>
+         <y>10</y>
          <width>611</width>
-         <height>291</height>
+         <height>341</height>
         </rect>
        </property>
        <property name="text">
@@ -490,4 +490,3 @@ gridline-color: rgb(255, 255, 255);</string>
  <resources/>
  <connections/>
 </ui>
-
