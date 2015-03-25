@@ -23,7 +23,7 @@ QMainWindow {
  QWidget, QDialog, QFrame, #AskPassphraseDialog, #EditAddressDialog 
 
 {
-    background-color: #000000;
+    background-color: transparent;
 /*    border-image: url(themes/default/bg.png);*/
 }
 
