@@ -9,7 +9,8 @@
 #define CLIENT_VERSION_MAJOR       0
 #define CLIENT_VERSION_MINOR       9
 #define CLIENT_VERSION_REVISION    1
-#define CLIENT_VERSION_BUILD       3
+#define CLIENT_VERSION_BUILD       4
+// 9-1-4 New Testnet Hash und Merkleroot
 
 // Set to true for release, false for prerelease or test build
 // Vorher true
