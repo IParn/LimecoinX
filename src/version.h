@@ -1,10 +1,12 @@
-// Copyright (c) 2012 The Bitcoin developers
+// Copyright (c) 2012-2014 The Bitcoin developers
+// Copyright (c) 2014-2015 The Limecoinx developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #ifndef BITCOIN_VERSION_H
 #define BITCOIN_VERSION_H
 
 #include "clientversion.h"
+
 #include <string>
 
 //
@@ -25,13 +27,14 @@ extern const std::string CLIENT_DATE;
 // network protocol versioning
 //
 
-static const int PROTOCOL_VERSION = 70013;
+static const int PROTOCOL_VERSION = 70016;
 
 // intial proto version, to be increased after version/verack negotiation
 static const int INIT_PROTO_VERSION = 209;
 
 // disconnect from peers older than this proto version
-static const int MIN_PEER_PROTO_VERSION = 70012;
+static const int MIN_PEER_PROTO_VERSION = 70015;
+// Sprungmarke AAAAAAADDDDD Achtung der Wert muss für Relaese 70013 sein.
 
 // nTime field added to CAddress, starting with this version;
 // if possible, avoid requesting addresses nodes older than this
