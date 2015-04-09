@@ -39,8 +39,8 @@ public:
         pchMessageStart[3] = 0xf9;    //limxdev 04-2015
          // //limxdev 04-2015   janin.currency.createCurrency ("LimecoinX",   0x66, 0xE6, "6",    "p"    , ""),
         vAlertPubKey = ParseHex("048240a8748a80a286b270ba126705ced4f2ce5a7847b3610ea3c06513150dade2a8512ed5ea86320824683fc0818f0ac019214973e677acd1244f6d0571fc5103"); //limxdev 04-2015   ist bei allen gleich
-        nDefaultPort = 7885;
-        nRPCPort = 7884;
+        nDefaultPort = 8886;
+        nRPCPort = 8800;
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 20);  // Limecoinx starting difficulty is 1 / 2^12    //limxdev 04-2015   main.cpp 36
         nSubsidyHalvingInterval = 210000; //limxdev 04-2015   UNBEKANNT FUNKTION
 

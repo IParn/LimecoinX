@@ -4076,8 +4076,8 @@ esimerkiksi: alertnotify=echo %%s | mail -s &quot;Limx Hälytys&quot; admin@foo.
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="101"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 7884 or testnet: 8884)</source>
-        <translation>Kuuntele JSON-RPC yhteyksiä portista &lt;port&gt; (oletus: 7884 tai testiverkko: 8884)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 8800 or testnet: 8884)</source>
+        <translation>Kuuntele JSON-RPC yhteyksiä portista &lt;port&gt; (oletus: 8800 tai testiverkko: 8884)</translation>
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="103"/>
@@ -4315,8 +4315,8 @@ Jos tiedostoa ei ole, niin luo se ainoastaan omistajan kirjoitusoikeuksin.</tran
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="195"/>
-        <source>Connect to JSON-RPC on &lt;port&gt; (default: 7884 or testnet: 8884)</source>
-        <translation>Yhdistä JSON-RPC porttiin &lt;port&gt; (oletus: 7884 tai testiverkko: 8884)</translation>
+        <source>Connect to JSON-RPC on &lt;port&gt; (default: 8800 or testnet: 8884)</source>
+        <translation>Yhdistä JSON-RPC porttiin &lt;port&gt; (oletus: 8800 tai testiverkko: 8884)</translation>
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="196"/>
@@ -4720,8 +4720,8 @@ Jos tiedostoa ei ole, niin luo se ainoastaan omistajan kirjoitusoikeuksin.</tran
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="276"/>
-        <source>Listen for connections on &lt;port&gt; (default: 7885 or testnet: 8885)</source>
-        <translation>Kuuntele yhteyksiä portista &lt;port&gt; (oletus: 7885 tai testiverkko: 8885)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 8886 or testnet: 8885)</source>
+        <translation>Kuuntele yhteyksiä portista &lt;port&gt; (oletus: 8886 tai testiverkko: 8885)</translation>
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="277"/>

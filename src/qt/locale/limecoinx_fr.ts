@@ -4072,8 +4072,8 @@ Pour exemple: alertnotify=echo %%s | mail -s &quot;Alerte Limx&quot; admin@foo.c
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="101"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 7884 or testnet: 8884)</source>
-        <translation>Écouter les connexions JSON-RPC sur &lt;port&gt; (par défaut : 7884 ou tesnet : 8884)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 8800 or testnet: 8884)</source>
+        <translation>Écouter les connexions JSON-RPC sur &lt;port&gt; (par défaut : 8800 ou tesnet : 8884)</translation>
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="103"/>
@@ -4311,7 +4311,7 @@ Si le fichier n&apos;existe pas, créez-le avec les droits de lecture seule acco
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="195"/>
-        <source>Connect to JSON-RPC on &lt;port&gt; (default: 7884 or testnet: 8884)</source>
+        <source>Connect to JSON-RPC on &lt;port&gt; (default: 8800 or testnet: 8884)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -4716,8 +4716,8 @@ Si le fichier n&apos;existe pas, créez-le avec les droits de lecture seule acco
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="276"/>
-        <source>Listen for connections on &lt;port&gt; (default: 7885 or testnet: 8885)</source>
-        <translation>Écouter les connexions sur &lt;port&gt; (par défaut: 7885 ou testnet: 8885)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 8886 or testnet: 8885)</source>
+        <translation>Écouter les connexions sur &lt;port&gt; (par défaut: 8886 ou testnet: 8885)</translation>
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="277"/>

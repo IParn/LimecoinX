@@ -4083,8 +4083,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Limx Alert&quot; admin@foo.com
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="101"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 7884 or testnet: 8884)</source>
-        <translation> Für den Jäison sai Er Pe Ze hörma auf &lt;port&gt; Numma.... (kört: 7884 und fürs Kindazimma: 8884)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 8800 or testnet: 8884)</source>
+        <translation> Für den Jäison sai Er Pe Ze hörma auf &lt;port&gt; Numma.... (kört: 8800 und fürs Kindazimma: 8884)</translation>
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="103"/>
@@ -4320,8 +4320,8 @@ If the file does not exist, create it with owner-readable-only file permissions.
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="195"/>
-        <source>Connect to JSON-RPC on &lt;port&gt; (default: 7884 or testnet: 8884)</source>
-        <translation>Dem Jäison sai Er Pe Ze schraima auf &lt;port&gt; Numma.... (kört: 7884 und fürs Kindazimma: 8884)</translation>
+        <source>Connect to JSON-RPC on &lt;port&gt; (default: 8800 or testnet: 8884)</source>
+        <translation>Dem Jäison sai Er Pe Ze schraima auf &lt;port&gt; Numma.... (kört: 8800 und fürs Kindazimma: 8884)</translation>
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="196"/>
@@ -4725,8 +4725,8 @@ If the file does not exist, create it with owner-readable-only file permissions.
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="276"/>
-        <source>Listen for connections on &lt;port&gt; (default: 7885 or testnet: 8885)</source>
-        <translation>Zu höan du ma generall auf &lt;port&gt; Numma.... (kört: 7885 und fürs Kindazimma: 8885)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 8886 or testnet: 8885)</source>
+        <translation>Zu höan du ma generall auf &lt;port&gt; Numma.... (kört: 8886 und fürs Kindazimma: 8885)</translation>
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="277"/>

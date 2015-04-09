@@ -4076,8 +4076,8 @@ admin@foo.com
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="101"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 7884 or testnet: 8884)</source>
-        <translation>Avlyssna JSON-RPC-anslutningar på &lt;port&gt; (standardvärde: 7884 eller testnet: 8884)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 8800 or testnet: 8884)</source>
+        <translation>Avlyssna JSON-RPC-anslutningar på &lt;port&gt; (standardvärde: 8800 eller testnet: 8884)</translation>
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="103"/>
@@ -4127,7 +4127,7 @@ admin@foo.com
     <message>
         <location filename="../limxstrings.cpp" line="127"/>
         <source>Show N confirmations for a successfully locked transaction (0-9999, default: 1)</source>
-        <translation>Visa N bekräftelser för en lyckad transaktionslåsning (0 - 7885, standardvärde: 1)</translation>
+        <translation>Visa N bekräftelser för en lyckad transaktionslåsning (0 - 8886, standardvärde: 1)</translation>
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="130"/>
@@ -4315,8 +4315,8 @@ Om filen inte existerar, skapa den och ge inga andra än ägaren läsarrättighe
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="195"/>
-        <source>Connect to JSON-RPC on &lt;port&gt; (default: 7884 or testnet: 8884)</source>
-        <translation>Anslut till JSON-RPC på &lt;port&gt; (standardvärde: 7884 eller testnet: 8884)</translation>
+        <source>Connect to JSON-RPC on &lt;port&gt; (default: 8800 or testnet: 8884)</source>
+        <translation>Anslut till JSON-RPC på &lt;port&gt; (standardvärde: 8800 eller testnet: 8884)</translation>
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="196"/>
@@ -4720,8 +4720,8 @@ Om filen inte existerar, skapa den och ge inga andra än ägaren läsarrättighe
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="276"/>
-        <source>Listen for connections on &lt;port&gt; (default: 7885 or testnet: 8885)</source>
-        <translation>Avlyssna anslutningar på &lt;port&gt;  (standardvärde: 7885 eller testnet: 8885)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 8886 or testnet: 8885)</source>
+        <translation>Avlyssna anslutningar på &lt;port&gt;  (standardvärde: 8886 eller testnet: 8885)</translation>
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="277"/>

@@ -4075,8 +4075,8 @@ zum Beispiel: alertnotify=echo %%s | mail -s \&quot;Limx Alert\&quot; admin@foo.
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="101"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 7884 or testnet: 8884)</source>
-        <translation>&lt;port&gt;nach JSON-RPC-Verbindungen abhören (Standard: 7884 oder Testnetz: 8884)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 8800 or testnet: 8884)</source>
+        <translation>&lt;port&gt;nach JSON-RPC-Verbindungen abhören (Standard: 8800 oder Testnetz: 8884)</translation>
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="103"/>
@@ -4314,8 +4314,8 @@ Falls die Konfigurationsdatei nicht existiert, erzeugen Sie diese bitte mit Lese
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="195"/>
-        <source>Connect to JSON-RPC on &lt;port&gt; (default: 7884 or testnet: 8884)</source>
-        <translation>Mit JSON-RPC auf &lt;port&gt; verbinden (Standard: 7884 oder Testnetz: 8884)</translation>
+        <source>Connect to JSON-RPC on &lt;port&gt; (default: 8800 or testnet: 8884)</source>
+        <translation>Mit JSON-RPC auf &lt;port&gt; verbinden (Standard: 8800 oder Testnetz: 8884)</translation>
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="196"/>
@@ -4720,8 +4720,8 @@ Limx Core wird heruntergefahren.</translation>
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="276"/>
-        <source>Listen for connections on &lt;port&gt; (default: 7885 or testnet: 8885)</source>
-        <translation>&lt;port&gt; nach Verbindungen abhören (Standard: 7885 oder Testnetz: 8885)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 8886 or testnet: 8885)</source>
+        <translation>&lt;port&gt; nach Verbindungen abhören (Standard: 8886 oder Testnetz: 8885)</translation>
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="277"/>

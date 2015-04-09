@@ -4075,8 +4075,8 @@ rpcpassword=%s
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="101"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 7884 or testnet: 8884)</source>
-        <translation>在通訊埠 &lt;port&gt; 聽候 JSON-RPC 連線(預設值: 7884, 或若為測試網路: 8884)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 8800 or testnet: 8884)</source>
+        <translation>在通訊埠 &lt;port&gt; 聽候 JSON-RPC 連線(預設值: 8800, 或若為測試網路: 8884)</translation>
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="103"/>
@@ -4314,8 +4314,8 @@ If the file does not exist, create it with owner-readable-only file permissions.
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="195"/>
-        <source>Connect to JSON-RPC on &lt;port&gt; (default: 7884 or testnet: 8884)</source>
-        <translation>透過通訊埠 &lt;port&gt; 連線到 JSON-RPC  (預設值: 7884 或測試網路: 8884)</translation>
+        <source>Connect to JSON-RPC on &lt;port&gt; (default: 8800 or testnet: 8884)</source>
+        <translation>透過通訊埠 &lt;port&gt; 連線到 JSON-RPC  (預設值: 8800 或測試網路: 8884)</translation>
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="196"/>
@@ -4719,8 +4719,8 @@ If the file does not exist, create it with owner-readable-only file permissions.
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="276"/>
-        <source>Listen for connections on &lt;port&gt; (default: 7885 or testnet: 8885)</source>
-        <translation>在通訊埠 &lt;port&gt; 聽候連線(預設值: 7885, 或若為測試網路: 8885)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 8886 or testnet: 8885)</source>
+        <translation>在通訊埠 &lt;port&gt; 聽候連線(預設值: 8886, 或若為測試網路: 8885)</translation>
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="277"/>

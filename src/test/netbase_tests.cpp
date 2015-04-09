@@ -18,7 +18,7 @@ BOOST_AUTO_TEST_CASE(netbase_networks)
     BOOST_CHECK(CNetAddr("127.0.0.1").GetNetwork()                              == NET_UNROUTABLE);
     BOOST_CHECK(CNetAddr("::1").GetNetwork()                                    == NET_UNROUTABLE);
     BOOST_CHECK(CNetAddr("8.8.8.8").GetNetwork()                                == NET_IPV4);
-    BOOST_CHECK(CNetAddr("2001::8888").GetNetwork()                             == NET_IPV6);
+    BOOST_CHECK(CNetAddr("2001::8886").GetNetwork()                             == NET_IPV6);
     BOOST_CHECK(CNetAddr("FD87:D87E:EB43:edb1:8e4:3588:e546:35ca").GetNetwork() == NET_TOR);
 }
 
@@ -61,15 +61,15 @@ BOOST_AUTO_TEST_CASE(netbase_splithost)
     BOOST_CHECK(TestSplitHost("www.bitcoin.org:80", "www.bitcoin.org", 80));
     BOOST_CHECK(TestSplitHost("[www.bitcoin.org]:80", "www.bitcoin.org", 80));
     BOOST_CHECK(TestSplitHost("127.0.0.1", "127.0.0.1", -1));
-    BOOST_CHECK(TestSplitHost("127.0.0.1:7885", "127.0.0.1", 7885));
+    BOOST_CHECK(TestSplitHost("127.0.0.1:8886", "127.0.0.1", 8886));
     BOOST_CHECK(TestSplitHost("[127.0.0.1]", "127.0.0.1", -1));
-    BOOST_CHECK(TestSplitHost("[127.0.0.1]:7885", "127.0.0.1", 7885));
+    BOOST_CHECK(TestSplitHost("[127.0.0.1]:8886", "127.0.0.1", 8886));
     BOOST_CHECK(TestSplitHost("::ffff:127.0.0.1", "::ffff:127.0.0.1", -1));
-    BOOST_CHECK(TestSplitHost("[::ffff:127.0.0.1]:7885", "::ffff:127.0.0.1", 7885));
-    BOOST_CHECK(TestSplitHost("[::]:7885", "::", 7885));
-    BOOST_CHECK(TestSplitHost("::7885", "::7885", -1));
-    BOOST_CHECK(TestSplitHost(":7885", "", 7885));
-    BOOST_CHECK(TestSplitHost("[]:7885", "", 7885));
+    BOOST_CHECK(TestSplitHost("[::ffff:127.0.0.1]:8886", "::ffff:127.0.0.1", 8886));
+    BOOST_CHECK(TestSplitHost("[::]:8886", "::", 8886));
+    BOOST_CHECK(TestSplitHost("::8886", "::8886", -1));
+    BOOST_CHECK(TestSplitHost(":8886", "", 8886));
+    BOOST_CHECK(TestSplitHost("[]:8886", "", 8886));
     BOOST_CHECK(TestSplitHost("", "", -1));
 }
 
@@ -84,10 +84,10 @@ bool static TestParse(string src, string canon)
 BOOST_AUTO_TEST_CASE(netbase_lookupnumeric)
 {
     BOOST_CHECK(TestParse("127.0.0.1", "127.0.0.1:65535"));
-    BOOST_CHECK(TestParse("127.0.0.1:7885", "127.0.0.1:7885"));
+    BOOST_CHECK(TestParse("127.0.0.1:8886", "127.0.0.1:8886"));
     BOOST_CHECK(TestParse("::ffff:127.0.0.1", "127.0.0.1:65535"));
     BOOST_CHECK(TestParse("::", "[::]:65535"));
-    BOOST_CHECK(TestParse("[::]:7885", "[::]:7885"));
+    BOOST_CHECK(TestParse("[::]:8886", "[::]:8886"));
     BOOST_CHECK(TestParse("[127.0.0.1]", "127.0.0.1:65535"));
     BOOST_CHECK(TestParse(":::", ""));
 }

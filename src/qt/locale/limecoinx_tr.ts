@@ -4059,7 +4059,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Limx Alert&quot; admin@foo.com
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="101"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 7884 or testnet: 8884)</source>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 8800 or testnet: 8884)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -4298,7 +4298,7 @@ Dosya mevcut değilse, sadece sahibi için okumayla sınırlı izin ile oluştur
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="195"/>
-        <source>Connect to JSON-RPC on &lt;port&gt; (default: 7884 or testnet: 8884)</source>
+        <source>Connect to JSON-RPC on &lt;port&gt; (default: 8800 or testnet: 8884)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -4703,7 +4703,7 @@ Dosya mevcut değilse, sadece sahibi için okumayla sınırlı izin ile oluştur
     </message>
     <message>
         <location filename="../limxstrings.cpp" line="276"/>
-        <source>Listen for connections on &lt;port&gt; (default: 7885 or testnet: 8885)</source>
+        <source>Listen for connections on &lt;port&gt; (default: 8886 or testnet: 8885)</source>
         <translation type="unfinished"/>
     </message>
     <message>

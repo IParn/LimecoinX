@@ -57,11 +57,11 @@ reachable from the Tor network. Add these lines to your /etc/tor/torrc (or equiv
 config file):
 
 	HiddenServiceDir /var/lib/tor/limecoinx-service/
-	HiddenServicePort 7885 127.0.0.1:7885
+	HiddenServicePort 8886 127.0.0.1:8886
 	HiddenServicePort 8885 127.0.0.1:8885
 
 The directory can be different of course, but (both) port numbers should be equal to
-your limecoinxd's P2P listen port (7885 by default).
+your limecoinxd's P2P listen port (8886 by default).
 
 	-externalip=X   You can tell limecoinx about its publicly reachable address using
 	                this option, and this can be a .onion address. Given the above
@@ -91,7 +91,7 @@ specify:
 
 	./limecoinxd ... -discover
 
-and open port 7885 on your firewall (or use -upnp).
+and open port 8886 on your firewall (or use -upnp).
 
 If you only want to use Tor to reach onion addresses, but not use it as a proxy
 for normal IPv4/IPv6 communication, use:
