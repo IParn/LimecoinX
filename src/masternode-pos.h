@@ -25,7 +25,7 @@ class CMasternodeScanningError;
 extern map<uint256, CMasternodeScanningError> mapMasternodeScanningErrors;
 extern CMasternodeScanning mnscan;
 
-static const int MIN_MASTERNODE_POS_PROTO_VERSION = 70015;
+static const int MIN_MASTERNODE_POS_PROTO_VERSION = 70075;
 
 /*
 	1% of the network is scanned every 2.5 minutes, making a full
@@ -33,7 +33,7 @@ static const int MIN_MASTERNODE_POS_PROTO_VERSION = 70015;
 	a day of proof-of-service errors for complete removal from the
 	masternode system.
 */
-static const int MASTERNODE_SCANNING_ERROR_THESHOLD = 6;
+static const int MASTERNODE_SCANNING_ERROR_THESHOLD = 6;  //6
 
 #define SCANNING_SUCCESS                       1
 #define SCANNING_ERROR_NO_RESPONSE             2

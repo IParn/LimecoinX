@@ -27,13 +27,13 @@ extern const std::string CLIENT_DATE;
 // network protocol versioning
 //
 
-static const int PROTOCOL_VERSION = 70016;
+static const int PROTOCOL_VERSION = 70075;
 
 // intial proto version, to be increased after version/verack negotiation
 static const int INIT_PROTO_VERSION = 209;
 
 // disconnect from peers older than this proto version
-static const int MIN_PEER_PROTO_VERSION = 70015;
+static const int MIN_PEER_PROTO_VERSION = 70070;
 // Sprungmarke AAAAAAADDDDD Achtung der Wert muss für Relaese 70013 sein.
 
 // nTime field added to CAddress, starting with this version;

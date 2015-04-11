@@ -61,11 +61,11 @@ public:
         genesis.nNonce   = 34784351;  //limxdev 04-2015
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x0000012e1b8843ac9ce8c18603658eaf8895f99d3f5e7e1b7b1686f35e3c087a"));   //limx   DRK 0x00000ffd590b1485b3caadc19b22e6379c733355108f107a430458cdf3407ab6
+        assert(hashGenesisBlock == uint256("0x0000012e1b8843ac9ce8c18603658eaf8895f99d3f5e7e1b7b1686f35e3c087a"));   //limx   
         assert(genesis.hashMerkleRoot == uint256("0xc0c4f68994b78c31b6c7d7a8a895b5a085857adfbb73699bcfe5a247a357df57"));   //checkpoint 38
 
-        vSeeds.push_back(CDNSSeedData("", ""));  //Limxian
-        vSeeds.push_back(CDNSSeedData("", "")); //coinwall
+     //   vSeeds.push_back(CDNSSeedData("", ""));  //Limxian
+     //   vSeeds.push_back(CDNSSeedData("", "")); //coinwall
         vSeeds.push_back(CDNSSeedData("5.56.209.255", "5.56.209.255"));
     //   vSeeds.push_back(CDNSSeedData("144.76.239.66", "144.76.239.66")); //coinwall
     //    vSeeds.push_back(CDNSSeedData("108.61.179.50", "108.61.179.50"));  //cointopl

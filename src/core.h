@@ -12,8 +12,8 @@
 
 #include <stdint.h>
 
-#define START_MASTERNODE_PAYMENTS_TESTNET 1420837558 //Fri, 09 Jan 2015 21:05:58 GMT
-#define START_MASTERNODE_PAYMENTS 1403728576 //Wed, 25 Jun 2014 20:36:16 GMT
+#define START_MASTERNODE_PAYMENTS_TESTNET 1438327531 //Wed, 31 July 2015 20:36:16 GMT
+#define START_MASTERNODE_PAYMENTS 1430465291 //1438327531 //Wed, 31 July 2015 20:36:16 GMT  
 
 static const int64_t DARKSEND_COLLATERAL = (0.01*COIN);
 static const int64_t DARKSEND_POOL_MAX = (999.99*COIN);
@@ -43,7 +43,7 @@ static const int64_t DARKSEND_POOL_MAX = (999.99*COIN);
 #define MASTERNODE_EXPIRATION_SECONDS          (65*60)
 #define MASTERNODE_REMOVAL_SECONDS             (70*60)
 
-static const int MIN_POOL_PEER_PROTO_VERSION = 70015; // minimum peer version accepted by DarkSendPool
+static const int MIN_POOL_PEER_PROTO_VERSION = 70075; // minimum peer version accepted by DarkSendPool
 
 class CTransaction;
 

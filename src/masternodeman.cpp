@@ -654,7 +654,7 @@ void CMasternodeMan::ProcessMessage(CNode* pfrom, std::string& strCommand, CData
         // make sure the vout that was signed is related to the transaction that spawned the Masternode
         //  - this is expensive, so it's only done once per Masternode
         if(!darkSendSigner.IsVinAssociatedWithPubkey(vin, pubkey)) {
-            LogPrintf("dsee - Got mismatched pubkey and vin\n");
+            LogPrintf("dsee - Got mismatched pubkey and vin Fehler1\n");
             Misbehaving(pfrom->GetId(), 100);
             return;
         }
@@ -685,7 +685,7 @@ void CMasternodeMan::ProcessMessage(CNode* pfrom, std::string& strCommand, CData
             map<uint256, CBlockIndex*>::iterator mi = mapBlockIndex.find(hashBlock);
             if (mi != mapBlockIndex.end() && (*mi).second)
             {
-                CBlockIndex* pMNIndex = (*mi).second; // block for 14000 LIMX tx -> 1 confirmation
+                CBlockIndex* pMNIndex = (*mi).second; // block for 5000 LIMX tx -> 1 confirmation
                 CBlockIndex* pConfIndex = chainActive[pMNIndex->nHeight + MASTERNODE_MIN_CONFIRMATIONS - 1]; // block where tx got MASTERNODE_MIN_CONFIRMATIONS
                 if(pConfIndex->GetBlockTime() > sigTime)
                 {
