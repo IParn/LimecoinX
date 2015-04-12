@@ -1429,7 +1429,7 @@ double ConvertBitsToDouble(unsigned int nBits)
 
 int64_t GetBlockValue(int nBits, int nHeight, int64_t nFees)
 {
-   // double dDiff = (double)0x0000ffff / (double)(nBits & 0x00ffffff);
+   double dDiff = (double)0x0000ffff / (double)(nBits & 0x00ffffff);
 	    int64_t nSubsidy = 50 * COIN;
 	
 	if (nHeight == 1)
@@ -2155,9 +2155,25 @@ bool ConnectBlock(CBlock& block, CValidationState& state, CBlockIndex* pindex, C
     // Now that the whole chain is irreversibly beyond that time it is applied to all blocks except the
     // two in the chain that violate it. This prevents exploiting the issue against nodes in their
     // initial block download.
-    bool fEnforceBIP30 = (!pindex->phashBlock) || // Enforce on CreateNewBlock invocations which don't have a hash.
-                          !((pindex->nHeight==91842 && pindex->GetBlockHash() == uint256("0x00000000000a4d0a398161ffc163c503763b1f4360639393e0e4c8e300e0caec")) ||
-                           (pindex->nHeight==91880 && pindex->GetBlockHash() == uint256("0x00000000000743f190a18c5577a3c2d2a1f610ae9601ac046a38084ccb7cd721")));
+    
+	bool fEnforceBIP30 = (!pindex->phashBlock);
+
+	//||  Enforce on CreateNewBlock invocations which don't have a hash.
+       //                   !((pindex->nHeight
+    // Do not allow blocks that contain transactions which 'overwrite' older transactions,
+    // unless those are already completely spent.
+    // If such overwrites are allowed, coinbases and transactions depending upon those
+    // can be duplicated to remove the ability to spend the first instance -- even after
+    // being sent to another address.
+    // See BIP30 and http://r6.ca/blog/20120206T005236Z.html for more information.
+    // This logic is not necessary for memory pool transactions, as AcceptToMemoryPool
+    // already refuses previously-known transaction ids entirely.
+    // This rule was originally applied all blocks whose timestamp was after March 15, 2012, 0:00 UTC.
+    // Now that the whole chain is irreversibly beyond that time it is applied to all blocks except the
+    // two in the chain that violate it. This prevents exploiting the issue against nodes in their
+    // initial block download.==91842 && pindex->GetBlockHash() == uint256("0x00000000000a4d0a398161ffc163c503763b1f4360639393e0e4c8e300e0caec")) ||
+        //                   (pindex->nHeight==91880 && pindex->GetBlockHash() == uint256("0x00000000000743f190a18c5577a3c2d2a1f610ae9601ac046a38084ccb7cd721")));
+						    //limxdev 12-04-2015
     if (fEnforceBIP30) {
         for (unsigned int i = 0; i < block.vtx.size(); i++) {
             uint256 hash = block.GetTxHash(i);
@@ -2961,7 +2977,8 @@ bool AcceptBlock(CBlock& block, CValidationState& state, CDiskBlockPos* dbp)
             if (block.nBits != GetNextWorkRequired(pindexPrev, &block))
                 return state.DoS(100, error("AcceptBlock() : incorrect proof of work"),
                                  REJECT_INVALID, "bad-diffbits");
-        } else {
+        } /*else 
+				{
             // Check proof of work (Here for the architecture issues with DGW v1 and v2)
             if(nHeight <= 68589){
                 unsigned int nBitsNext = GetNextWorkRequired(pindexPrev, &block);
@@ -2976,7 +2993,7 @@ bool AcceptBlock(CBlock& block, CValidationState& state, CDiskBlockPos* dbp)
                     return state.DoS(100, error("AcceptBlock() : incorrect proof of work"),
                                     REJECT_INVALID, "bad-diffbits");
             }
-        }
+        }*/ //limxdev 12-04-2015 Spungmakre CCCCCDDD
 
         // Check timestamp against prev
         if (block.GetBlockTime() <= pindexPrev->GetMedianTimePast())
