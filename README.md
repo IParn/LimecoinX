@@ -29,7 +29,6 @@ Limecoinx Core:
 - Adapted BIP44 coin type 5 for Limecoinx (0x80000005) as defined in SLIP-0044
 - Added new units: limes (1 / 100.000.000 LIMX)
 - Added units for testnet: tLIMX, mtLIMX, uLIMX, tlimes
-- Added new DNS seed from masternode.io
 - Fixed wallet locking after sending coins
 - Add -regtest mode, similar to testnet but private with instant block generation with setgenerate RPC.
 - Add separate limecoinx-cli client
