@@ -2156,10 +2156,7 @@ bool ConnectBlock(CBlock& block, CValidationState& state, CBlockIndex* pindex, C
     // two in the chain that violate it. This prevents exploiting the issue against nodes in their
     // initial block download.
     
-// Unbekannte BTC Funktion	bool fEnforceBIP30 = (!pindex->phashBlock); 
 
-	//||  Enforce on CreateNewBlock invocations which don't have a hash.
-       //                   !((pindex->nHeight
     // Do not allow blocks that contain transactions which 'overwrite' older transactions,
     // unless those are already completely spent.
     // If such overwrites are allowed, coinbases and transactions depending upon those
@@ -2171,9 +2168,11 @@ bool ConnectBlock(CBlock& block, CValidationState& state, CBlockIndex* pindex, C
     // This rule was originally applied all blocks whose timestamp was after March 15, 2012, 0:00 UTC.
     // Now that the whole chain is irreversibly beyond that time it is applied to all blocks except the
     // two in the chain that violate it. This prevents exploiting the issue against nodes in their
-    // initial block download.==91842 && pindex->GetBlockHash() == uint256("0x00000000000a4d0a398161ffc163c503763b1f4360639393e0e4c8e300e0caec")) ||
-        //                   (pindex->nHeight==91880 && pindex->GetBlockHash() == uint256("0x00000000000743f190a18c5577a3c2d2a1f610ae9601ac046a38084ccb7cd721")));
-						    //limxdev 12-04-2015
+    // initial block download.
+    	/*
+	bool fEnforceBIP30 = (((!pindex->phashBlock)==91842 && pindex->GetBlockHash() == uint256("0x00000000000a4d0a398161ffc163c503763b1f4360639393e0e4c8e300e0caec")) ||
+                         (pindex->nHeight==91880 && pindex->GetBlockHash() == uint256("0x00000000000743f190a18c5577a3c2d2a1f610ae9601ac046a38084ccb7cd721")));
+    
     if (fEnforceBIP30) {
         for (unsigned int i = 0; i < block.vtx.size(); i++) {
             uint256 hash = block.GetTxHash(i);
@@ -2182,7 +2181,7 @@ bool ConnectBlock(CBlock& block, CValidationState& state, CBlockIndex* pindex, C
                                  REJECT_INVALID, "bad-txns-BIP30");
         }
     }
-
+ */
     // BIP16 didn't become active until Apr 1 2012 // Mon, 13 Apr 2015
     int64_t nBIP16SwitchTime = 1428921339; // 1333238400;
     bool fStrictPayToScriptHash = (pindex->nTime >= nBIP16SwitchTime);
