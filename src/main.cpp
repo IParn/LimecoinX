@@ -2156,7 +2156,7 @@ bool ConnectBlock(CBlock& block, CValidationState& state, CBlockIndex* pindex, C
     // two in the chain that violate it. This prevents exploiting the issue against nodes in their
     // initial block download.
     
-	bool fEnforceBIP30 = (!pindex->phashBlock);
+// Unbekannte BTC Funktion	bool fEnforceBIP30 = (!pindex->phashBlock); 
 
 	//||  Enforce on CreateNewBlock invocations which don't have a hash.
        //                   !((pindex->nHeight
@@ -2183,8 +2183,8 @@ bool ConnectBlock(CBlock& block, CValidationState& state, CBlockIndex* pindex, C
         }
     }
 
-    // BIP16 didn't become active until Apr 1 2012
-    int64_t nBIP16SwitchTime = 1333238400;
+    // BIP16 didn't become active until Apr 1 2012 // Mon, 13 Apr 2015
+    int64_t nBIP16SwitchTime = 1428921339; // 1333238400;
     bool fStrictPayToScriptHash = (pindex->nTime >= nBIP16SwitchTime);
 
     unsigned int flags = SCRIPT_VERIFY_NOCACHE |
