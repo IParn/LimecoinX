@@ -21,9 +21,9 @@ using namespace boost::assign;
 
 unsigned int pnSeed[] =
 {
- //   0x0538D1FF, 0x95ACA665, 0x1BC0903A, 0xC6C766A5, 0xB924485A, 0x7526EDE1, 0xB924485A, 0x5519C5BA, 0x3EDD537F, 0x6C3DB332,
- //   0x904CEF42, 0x0587BF16, 0xA2F3CEE2, 0xCDD18F2A, 0x2F115487, 0xD4E35BBE, 0x5D989674, 0xBCA61AD1, 0x94FB46C2, 0x904CEF42,
- //   0x2E69D968, 0x05092709,
+  0x0538D1FF, 0x95ACA665, 0x1BC0903A, 0xC6C766A5, 0xB924485A, 0x7526EDE1, 0xB924485A, 0x5519C5BA, 0x3EDD537F, 0x6C3DB332,
+  0x904CEF42, 0x0587BF16, 0xA2F3CEE2, 0xCDD18F2A, 0x2F115487, 0xD4E35BBE, 0x5D989674, 0xBCA61AD1, 0x94FB46C2, 0x904CEF42,
+  0x2E69D968, 0x05092709,
 };
 // //limxdev 04-2015   New Seeds
 
@@ -162,7 +162,7 @@ static CTestNetParams testNetParams;
 class CRegTestParams : public CTestNetParams {
 public:
     CRegTestParams() {
-      // Alle Parameter hier unver‰ndert
+      // Alle Parameter hier unver√§ndert
         pchMessageStart[0] = 0xfc;          // Limxdev 04-2015 old    0xfc
         pchMessageStart[1] = 0xc1;          // Limxdev 04-2015 old    0xc1
         pchMessageStart[2] = 0xb7;         // Limxdev 04-2015 old     0xb7
