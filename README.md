@@ -21,7 +21,7 @@ Limecoinx Core:
 - Renamed client to identify with network from Satoshi to Core
 - Bumped protocol version to 70075
 - Masternode with 5000 LIMX
-- NEW Reward (50 LIMX /2 * 5 MIN)= 25 Miner && 25 Masternode
+- NEW Reward (50 LIMX /2 * 5 MIN)= 25 LIMX per Miner & 25 LIMX per Masternode
 - NEW RPC PORT 8800 and NEW P2PPortDefaul 8886
 // Changed p2sh-address versions to start with 7 (instead of 3, this affects public keys only, old scripts remain valid and - usable!)
 - Changed testnet address versions to start with x or y (instead of m or n, this affects public keys only, old wallets remain - valid and usable!)
