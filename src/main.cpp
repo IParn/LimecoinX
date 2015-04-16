@@ -1459,9 +1459,9 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue)
     return ret;
 }
 
-static const int64_t nTargetTimespan = 36 * 10 * 60; // LIMX 72 Blocks
+static const int64_t nTargetTimespan = 24 * 60 * 60; // LIMX 1 Day
 static const int64_t nTargetSpacing = 5 * 60; // Limecoinx: 5 minutes   LIMX
-static const int64_t nInterval = nTargetTimespan / nTargetSpacing; // 72
+static const int64_t nInterval = nTargetTimespan / nTargetSpacing; // 288 Blocks
 
 //
 // minimum amount of work that could possibly be required nTime after
@@ -1686,7 +1686,7 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
         // Retarget using Kimoto Gravity Wave
         else if (retarget == DIFF_KGW)
         {
-            static const uint64_t blocksTargetSpacing = 2.5 * 60; // 2.5 minutes
+            static const uint64_t blocksTargetSpacing = 5 * 60; // 5 minutes
             static const unsigned int timeDaySeconds = 60 * 60 * 24;
             uint64_t pastSecondsMin = timeDaySeconds * 0.025;
             uint64_t pastSecondsMax = timeDaySeconds * 7;
