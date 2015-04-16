@@ -1689,7 +1689,7 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
             static const uint64_t blocksTargetSpacing = 5 * 60; // 5 minutes
             static const unsigned int timeDaySeconds = 60 * 60 * 24;
             uint64_t pastSecondsMin = timeDaySeconds * 0.025;
-            uint64_t pastSecondsMax = timeDaySeconds * 7;
+            uint64_t pastSecondsMax = timeDaySeconds * 14;  // Sprungmarke AADD Old "7" new 14
             uint64_t pastBlocksMin = pastSecondsMin / blocksTargetSpacing;
             uint64_t pastBlocksMax = pastSecondsMax / blocksTargetSpacing;
 
