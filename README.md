@@ -23,9 +23,8 @@ Limecoinx Core:
 - Masternode with 5000 LIMX
 - NEW Reward (50 LIMX /2 * 5 MIN)= 25 LIMX per Miner & 25 LIMX per Masternode
 - NEW RPC PORT 8800 and NEW P2PPortDefaul 8886
-// Changed p2sh-address versions to start with 7 (instead of 3, this affects public keys only, old scripts remain valid and - usable!)
-- Changed testnet address versions to start with x or y (instead of m or n, this affects public keys only, old wallets remain - valid and usable!)
-- Defined BIP32 (HD) address versions to start with drkp/drkv (DRKP/DRKV for testnet)
+- Changed testnet address versions 
+- Defined BIP32 (HD) address versions
 - Adapted BIP44 coin type 5 for Limecoinx (0x80000005) as defined in SLIP-0044
 - Added new units: limes (1 / 100.000.000 LIMX)
 - Added units for testnet: tLIMX, mtLIMX, uLIMX, tlimes
@@ -330,14 +329,8 @@ are carried out collectively by the network. Limecoinx Core is the name of open
 source software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the Limecoinx Core software, see http://www.limecoinxpay.io/downloads.
+the Limecoinx Core software, see http://www.limx.eu
 
-
-License
--------
-
-Limecoinx Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
-information or see http://opensource.org/licenses/MIT.
 
 
 Building process
