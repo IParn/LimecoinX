@@ -1488,6 +1488,13 @@ bool CDarksendPool::DoAutomaticDenominating(bool fDryRun, bool ready)
             strAutoDenomResult = _("Found unconfirmed denominated outputs, will wait till they confirm to continue.");
             return false;
         }
+//check our collateral
+if(txCollateral != CTransaction()){
+if(!IsCollateralValid(txCollateral)) {
+txCollateral = CTransaction();
+LogPrintf("DoAutomaticDenominating -- Invalid collateral, resetting.\n");
+}
+}
 
         //don't use the queues all of the time for mixing
         if(nUseQueue > 33){
