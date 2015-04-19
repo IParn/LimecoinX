@@ -1413,7 +1413,6 @@ bool CDarksendPool::DoAutomaticDenominating(bool fDryRun, bool ready)
 
     // ** find the coins we'll use
     std::vector<CTxIn> vCoins;
-    std::vector<COutput> vCoins2;
     int64_t nValueMin = CENT;
     int64_t nValueIn = 0;
 
@@ -1514,9 +1513,11 @@ bool CDarksendPool::DoAutomaticDenominating(bool fDryRun, bool ready)
                         continue;
                     }
                 }
+                std::vector<CTxIn> vTempCoins;
+                std::vector<COutput> vTempCoins2;
 
                 // Try to match their denominations if possible
-                if (!pwalletMain->SelectCoinsByDenominations(dsq.nDenom, nValueMin, nBalanceNeedsAnonymized, vCoins, vCoins2, nValueIn, 0, nDarksendRounds)){
+                if (!pwalletMain->SelectCoinsByDenominations(dsq.nDenom, nValueMin, nBalanceNeedsAnonymized, vTempCoins, vTempCoins2, nValueIn, 0, nDarksendRounds)){
                     LogPrintf("DoAutomaticDenominating - Couldn't match denominations %d\n", dsq.nDenom);
                     continue;
                 }
