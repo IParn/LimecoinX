@@ -596,7 +596,6 @@ Value masternode(const Array& params, bool fHelp)
             std::vector<unsigned char> vchMasterNodeSignature;
             std::string strMasterNodeSignMessage;
 
-            CTxIn vin;
             CPubKey pubKeyCollateralAddress;
             CKey keyCollateralAddress;
             CPubKey pubKeyMasternode;
