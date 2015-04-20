@@ -294,7 +294,7 @@ QScrollBar::add-page, QScrollBar::sub-page { /* Scroll Bar Background */
 background:#f3f3f3;
 }
 
-QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical { /* Remove Up and Down Arrows from UI */
+QQScrollBar::add-line:vertical, QScrollBar::sub-line:vertical, QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal { /* Remove Up, Down, Left, Right Arrows from UI */
 width:0px;
 height:0px;
 }
