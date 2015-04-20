@@ -492,7 +492,7 @@ CTxDestination address3;
 
 ExtractDestination(payeeSource, address3);
 CBitcoinAddress address4(address3);
-
+LogPrintf("Winner payee %s nHeight %d vin source %s. \n", address2.ToString().c_str(), newWinner.nBlockHeight, address4.ToString().c_str());
 
     if(Sign(newWinner))
     {
@@ -507,9 +507,10 @@ CBitcoinAddress address4(address3);
     return false;
 }
 
+
 void CMasternodePayments::Relay(CMasternodePaymentWinner& winner)
 {
-    CInv inv(MSG_MASTERNODE_WINNER, winner.GetHash());
+        CInv inv(MSG_MASTERNODE_WINNER, winner.GetHash());
 
     vector<CInv> vInv;
     vInv.push_back(inv);
