@@ -529,4 +529,3 @@ void RPCConsole::showBackups()
 {
     GUIUtil::showBackups();
 }
-}
