@@ -7,7 +7,7 @@ Copyright (c) 2009-2015 Bitcoin Core Developers
 
 Copyright (c) 2014-2015 Limecoinx Core Developers
 
-Don't use this version. !!! (Beta) Release 21.04.2015
+Release 21.04.2015
 ----------------
 The Version 0.11.X add new function. 
 
