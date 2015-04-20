@@ -294,6 +294,10 @@ QScrollBar::add-page, QScrollBar::sub-page { /* Scroll Bar Background */
 background:#f3f3f3;
 }
 
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical { /* Remove Up and Down Arrows from UI */
+width:0px;
+height:0px;
+}
 /*******************************************************/
 
 /* DIALOG BOXES */
