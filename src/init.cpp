@@ -48,6 +48,7 @@ using namespace boost;
 #ifdef ENABLE_WALLET
 std::string strWalletFile;
 CWallet* pwalletMain;
+int nWalletBackups = 10;
 #endif
 
 #ifdef WIN32
