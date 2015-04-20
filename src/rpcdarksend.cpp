@@ -635,7 +635,7 @@ success++;
             //send to all peers
             LOCK(cs_vNodes);
             BOOST_FOREACH(CNode* pnode, vNodes)
-                pnode->PushMessage("mvote", vin, vchMasterNodeSignature, nVote);
+                pnode->PushMessage("mvote", pmn->vin, vchMasterNodeSignature, nVote);
 
         }
 return("Voted successfully " + boost::lexical_cast<std::string>(success) + " time(s) and failed " + boost::lexical_cast<std::string>(failed) + " time(s).");
