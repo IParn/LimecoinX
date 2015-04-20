@@ -211,6 +211,9 @@ bool CActiveMasternode::Dseep(CTxIn vin, CService service, CKey keyMasternode, C
     CMasternode* pmn = mnodeman.Find(vin);
     if(pmn != NULL)
     {
+        if(stop)
+        mnodeman.Remove(pmn->vin);
+        else
         pmn->UpdateLastSeen();
     }
     else
