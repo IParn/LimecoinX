@@ -524,3 +524,9 @@ void RPCConsole::showConfEditor()
 {
     GUIUtil::openConfigfile();
 }
+
+void RPCConsole::showBackups()
+{
+    GUIUtil::showBackups();
+}
+}
