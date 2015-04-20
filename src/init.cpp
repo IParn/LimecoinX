@@ -753,7 +753,7 @@ if(nWalletBackups > 0)
                 boost::filesystem::path currentFile;
                 for (boost::filesystem::directory_iterator dir_iter(backupFolder); dir_iter != end_iter; ++dir_iter)
                 {
-                    / Only check regular files
+                    // Only check regular files
                     if ( boost::filesystem::is_regular_file(dir_iter->status()))
                     {
                         currentFile = dir_iter->path().filename();
