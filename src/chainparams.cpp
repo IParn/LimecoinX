@@ -66,7 +66,7 @@ public:
 
      //   vSeeds.push_back(CDNSSeedData("", ""));  //Limxian
      //   vSeeds.push_back(CDNSSeedData("", "")); //coinwall
-        vSeeds.push_back(CDNSSeedData("5.56.209.255", "5.56.209.255"));
+        vSeeds.push_back(CDNSSeedData("85.214.68.75", "85.214.68.75"));
     //   vSeeds.push_back(CDNSSeedData("144.76.239.66", "144.76.239.66")); //coinwall
     //    vSeeds.push_back(CDNSSeedData("108.61.179.50", "108.61.179.50"));  //cointopl
     //    vSeeds.push_back(CDNSSeedData("27.192.144.58", "27.192.144.58"));
