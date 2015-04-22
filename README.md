@@ -5,7 +5,7 @@ http://www.limx.eu
 
 Copyright (c) 2009-2015 Bitcoin Core Developers
 
-Copyright (c) 2014-2015 Limecoinx Core Developers
+Copyright (c) 2014-2015 Dash & Limecoinx Core Developers
 
 Release 21.04.2015
 ----------------
