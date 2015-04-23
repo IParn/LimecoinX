@@ -16,7 +16,7 @@
 #define START_MASTERNODE_PAYMENTS 1430465291 //1438327531 //Wed, 31 July 2015 20:36:16 GMT  
 
 static const int64_t DARKSEND_COLLATERAL = (0.01*COIN);
-static const int64_t DARKSEND_POOL_MAX = (999.99*COIN);
+static const int64_t DARKSEND_POOL_MAX = (4999.99*COIN);
 
 /*
     At 15 signatures, 1/2 of the masternode network can be owned by
