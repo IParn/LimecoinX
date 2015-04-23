@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2012 The Bitcoin developers
+// Copyright (c) 2009-2013 The Bitcoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -10,19 +10,13 @@
 #ifndef __INCLUDED_PROTOCOL_H__
 #define __INCLUDED_PROTOCOL_H__
 
-#include "serialize.h"
+#include "chainparams.h"
 #include "netbase.h"
-#include <string>
+#include "serialize.h"
 #include "uint256.h"
 
-extern bool fTestNet;
-static inline unsigned short GetDefaultPort(const bool testnet = fTestNet)
-{
-    return testnet ? 8885 : 7884;
-}
-
-
-extern unsigned char pchMessageStart[4];
+#include <stdint.h>
+#include <string>
 
 /** Message header.
  * (4) message start.
@@ -50,7 +44,6 @@ class CMessageHeader
     // TODO: make private (improves encapsulation)
     public:
         enum {
-            MESSAGE_START_SIZE=sizeof(::pchMessageStart),
             COMMAND_SIZE=12,
             MESSAGE_SIZE_SIZE=sizeof(int),
             CHECKSUM_SIZE=sizeof(int),
@@ -69,7 +62,6 @@ class CMessageHeader
 enum
 {
     NODE_NETWORK = (1 << 0),
-    NODE_BLOOM = (1 << 1),
 };
 
 /** A CService with information about it as peer */
@@ -77,7 +69,7 @@ class CAddress : public CService
 {
     public:
         CAddress();
-        explicit CAddress(CService ipIn, uint64 nServicesIn=NODE_NETWORK);
+        explicit CAddress(CService ipIn, uint64_t nServicesIn=NODE_NETWORK);
 
         void Init();
 
@@ -100,13 +92,13 @@ class CAddress : public CService
 
     // TODO: make private (improves encapsulation)
     public:
-        uint64 nServices;
+        uint64_t nServices;
 
         // disk and network only
         unsigned int nTime;
 
         // memory only
-        int64 nLastTry;
+        int64_t nLastTry;
 };
 
 /** inv message data */
@@ -143,6 +135,11 @@ enum
     // Nodes may always request a MSG_FILTERED_BLOCK in a getdata, however,
     // MSG_FILTERED_BLOCK should not appear in any invs except as a part of getdata.
     MSG_FILTERED_BLOCK,
+    MSG_TXLOCK_REQUEST,
+    MSG_TXLOCK_VOTE,
+    MSG_SPORK,
+    MSG_MASTERNODE_WINNER,
+    MSG_MASTERNODE_SCANNING_ERROR
 };
 
 #endif // __INCLUDED_PROTOCOL_H__

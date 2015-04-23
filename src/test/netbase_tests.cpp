@@ -1,9 +1,13 @@
-#include <boost/test/unit_test.hpp>
-
-#include <string>
-#include <vector>
+// Copyright (c) 2012-2014 The Bitcoin Core developers
+// Copyright (c) 2014-2015 The Limecoinx Core developers
+// Distributed under the MIT/X11 software license, see the accompanying
+// file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "netbase.h"
+
+#include <string>
+
+#include <boost/test/unit_test.hpp>
 
 using namespace std;
 
@@ -14,7 +18,7 @@ BOOST_AUTO_TEST_CASE(netbase_networks)
     BOOST_CHECK(CNetAddr("127.0.0.1").GetNetwork()                              == NET_UNROUTABLE);
     BOOST_CHECK(CNetAddr("::1").GetNetwork()                                    == NET_UNROUTABLE);
     BOOST_CHECK(CNetAddr("8.8.8.8").GetNetwork()                                == NET_IPV4);
-    BOOST_CHECK(CNetAddr("2001::8888").GetNetwork()                             == NET_IPV6);
+    BOOST_CHECK(CNetAddr("2001::8886").GetNetwork()                             == NET_IPV6);
     BOOST_CHECK(CNetAddr("FD87:D87E:EB43:edb1:8e4:3588:e546:35ca").GetNetwork() == NET_TOR);
 }
 
@@ -57,15 +61,15 @@ BOOST_AUTO_TEST_CASE(netbase_splithost)
     BOOST_CHECK(TestSplitHost("www.bitcoin.org:80", "www.bitcoin.org", 80));
     BOOST_CHECK(TestSplitHost("[www.bitcoin.org]:80", "www.bitcoin.org", 80));
     BOOST_CHECK(TestSplitHost("127.0.0.1", "127.0.0.1", -1));
-    BOOST_CHECK(TestSplitHost("127.0.0.1:9333", "127.0.0.1", 9333));
+    BOOST_CHECK(TestSplitHost("127.0.0.1:8886", "127.0.0.1", 8886));
     BOOST_CHECK(TestSplitHost("[127.0.0.1]", "127.0.0.1", -1));
-    BOOST_CHECK(TestSplitHost("[127.0.0.1]:9333", "127.0.0.1", 9333));
+    BOOST_CHECK(TestSplitHost("[127.0.0.1]:8886", "127.0.0.1", 8886));
     BOOST_CHECK(TestSplitHost("::ffff:127.0.0.1", "::ffff:127.0.0.1", -1));
-    BOOST_CHECK(TestSplitHost("[::ffff:127.0.0.1]:9333", "::ffff:127.0.0.1", 9333));
-    BOOST_CHECK(TestSplitHost("[::]:9333", "::", 9333));
-    BOOST_CHECK(TestSplitHost("::9333", "::9333", -1));
-    BOOST_CHECK(TestSplitHost(":9333", "", 9333));
-    BOOST_CHECK(TestSplitHost("[]:9333", "", 9333));
+    BOOST_CHECK(TestSplitHost("[::ffff:127.0.0.1]:8886", "::ffff:127.0.0.1", 8886));
+    BOOST_CHECK(TestSplitHost("[::]:8886", "::", 8886));
+    BOOST_CHECK(TestSplitHost("::8886", "::8886", -1));
+    BOOST_CHECK(TestSplitHost(":8886", "", 8886));
+    BOOST_CHECK(TestSplitHost("[]:8886", "", 8886));
     BOOST_CHECK(TestSplitHost("", "", -1));
 }
 
@@ -80,17 +84,17 @@ bool static TestParse(string src, string canon)
 BOOST_AUTO_TEST_CASE(netbase_lookupnumeric)
 {
     BOOST_CHECK(TestParse("127.0.0.1", "127.0.0.1:65535"));
-    BOOST_CHECK(TestParse("127.0.0.1:9333", "127.0.0.1:9333"));
+    BOOST_CHECK(TestParse("127.0.0.1:8886", "127.0.0.1:8886"));
     BOOST_CHECK(TestParse("::ffff:127.0.0.1", "127.0.0.1:65535"));
     BOOST_CHECK(TestParse("::", "[::]:65535"));
-    BOOST_CHECK(TestParse("[::]:9333", "[::]:9333"));
+    BOOST_CHECK(TestParse("[::]:8886", "[::]:8886"));
     BOOST_CHECK(TestParse("[127.0.0.1]", "127.0.0.1:65535"));
     BOOST_CHECK(TestParse(":::", ""));
 }
 
 BOOST_AUTO_TEST_CASE(onioncat_test)
 {
-    // values from http://www.cypherpunk.at/onioncat/wiki/OnionCat
+    // values from https://web.archive.org/web/20121122003543/http://www.cypherpunk.at/onioncat/wiki/OnionCat
     CNetAddr addr1("5wyqrzbvrdsumnok.onion");
     CNetAddr addr2("FD87:D87E:EB43:edb1:8e4:3588:e546:35ca");
     BOOST_CHECK(addr1 == addr2);

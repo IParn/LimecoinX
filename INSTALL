@@ -1,9 +1,16 @@
-Building limecoin
+Building Dash
 
-See doc/readme-qt.rst for instructions on building limecoin-Qt,
-the intended-for-end-users, nice-graphical-interface, reference
-implementation of limecoin.
+Use the autogen script to prepare the build environment.
 
-See doc/build-*.txt for instructions on building limecoind,
+    ./autogen.sh
+    ./configure
+    make
+
+Precompiled binaries are available at github, see
+https://github.com/dashproject/dash-binaries
+
+Always verify the signatures and checksums.
+
+See doc/build-*.md for instructions on building dashd,
 the intended-for-services, no-graphical-interface, reference
-implementation of limecoin.
+implementation of Dash.
